@@ -35,6 +35,9 @@ define s = Character("Smaz")
 define ph = Character("Phyllis")
 define ss = Character("Sloppy Scock")
 
+#Background List
+#Nexus
+
 
 # The game starts here.
 
@@ -127,8 +130,37 @@ menu:
         "As you begin to panic the fireball springs from you hand forcing the officers to dodge and you both run through"
     "Throw it Confidently":
         "Before the officers have a chance to advance you throw the ball of fire and it explodes just in front of them and creates a path for the two of you to escape through"
+    #
 
+
+        l"I don’t need you fighting my battles... especially not with that whacked out ability you have."
+        nn"..."
+        l"Tsk... my life in the hands of a mute, typical. Here’s a hint: Only rubber can absorb the electrical energy of our Arachnivolt tank bot. If its energy is taken, it will stop, otherwise it will perpetually repair itself."
+
+        "You continue to hear the sound of a large machine but so far you have only encounterd guards"
+
+        l"Look theres water over there by the tree"
+
+        "As you both clean your hands and drink the fresh cold water you hear a crashing from the direction you came"
+        "Coming towards you is a machine spider tank"
+
+        l"Oh crud"
+
+        "Lione steps back and hits the tree"
+
+        l"Prisoner 30985 quick use that power to combust the tree sap it might slow it down!"
+
+menu:
+    nn"What should i do?"
+    "Combust the sap":
+        l"Smells like burning rubber..."
+    "Collect the sap":
+        l"You want to keep that? Fool! Throw it away on the Arachnivolt. There’s nowhere else to run... we have to fight it to stay alive..."
 #
+
+
+
+
 
 
 
