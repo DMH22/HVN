@@ -1,36 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 22, in script
-    define g = Characer("Guy")
-  File "game/script.rpy", line 22, in script
-    define g = Characer("Guy")
-  File "game/script.rpy", line 22, in <module>
-    define g = Characer("Guy")
-NameError: name 'Characer' is not defined
+  File "game/script.rpy", line 53, in script
+    menu:
+  File "renpy/common/00action_menu.rpy", line 220, in __call__
+    layout.yesno_screen(layout.QUIT, Quit(False))
+  File "renpy/common/00layout.rpy", line 527, in yesno_screen
+    if renpy.invoke_in_new_context(layout.invoke_yesno_prompt, None, message):
+  File "renpy/common/00layout.rpy", line 472, in invoke_yesno_prompt
+    rv = layout.yesno_prompt(*args)
+AttributeError: 'Layout' object has no attribute 'yesno_prompt'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 560, in main
-    renpy.game.context().run(node)
-  File "game/script.rpy", line 22, in script
-    define g = Characer("Guy")
-  File "game/script.rpy", line 22, in script
-    define g = Characer("Guy")
-  File "renpy/ast.py", line 2213, in execute
-    self.set()
-  File "renpy/ast.py", line 2224, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 22, in <module>
-    define g = Characer("Guy")
-NameError: name 'Characer' is not defined
+  File "game/script.rpy", line 53, in script
+    menu:
+  File "renpy/ast.py", line 1688, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "renpy/exports.py", line 1060, in menu
+    rv = renpy.store.menu(new_items)
+  File "renpy/exports.py", line 1296, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 4035, in interact_core
+    self.quit_event()
+  File "renpy/display/core.py", line 2977, in quit_event
+    renpy.display.behavior.run(renpy.config.quit_action)
+  File "renpy/display/behavior.py", line 330, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_menu.rpy", line 220, in __call__
+    layout.yesno_screen(layout.QUIT, Quit(False))
+  File "renpy/common/00layout.rpy", line 527, in yesno_screen
+    if renpy.invoke_in_new_context(layout.invoke_yesno_prompt, None, message):
+  File "renpy/game.py", line 284, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "renpy/common/00layout.rpy", line 472, in invoke_yesno_prompt
+    rv = layout.yesno_prompt(*args)
+AttributeError: 'Layout' object has no attribute 'yesno_prompt'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
-Hudokai The Visual Novel 1.0
-Tue May  3 12:27:05 2022
+ 
+Tue May  3 21:34:15 2022
