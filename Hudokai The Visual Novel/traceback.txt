@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 22, in script
+    define g = Characer("Guy")
+  File "game/script.rpy", line 22, in script
+    define g = Characer("Guy")
+  File "game/script.rpy", line 22, in <module>
+    define g = Characer("Guy")
+NameError: name 'Characer' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 560, in main
+    renpy.game.context().run(node)
+  File "game/script.rpy", line 22, in script
+    define g = Characer("Guy")
+  File "game/script.rpy", line 22, in script
+    define g = Characer("Guy")
+  File "renpy/ast.py", line 2213, in execute
+    self.set()
+  File "renpy/ast.py", line 2224, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 22, in <module>
+    define g = Characer("Guy")
+NameError: name 'Characer' is not defined
+
+Windows-10-10.0.19041
+Ren'Py 7.4.11.2266
+Hudokai The Visual Novel 1.0
+Tue May  3 12:27:05 2022

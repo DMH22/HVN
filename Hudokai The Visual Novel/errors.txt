@@ -1,0 +1,12 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+The label after_menu is defined twice, at File "game/script.rpy", line 87:
+    label after_menu:
+and File "game/script.rpy", line 137:
+    label after_menu:
+
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Tue May  3 13:14:51 2022
