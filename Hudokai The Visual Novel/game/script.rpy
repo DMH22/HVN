@@ -5,10 +5,9 @@
 
 # Main Cast List
 
-define e = Character("Eileen")
-define nn = Character("Prisoner 30895")
+define nn = Character("Prisoner 30895")#, image="novanum_left")
 define n = Character("Nova")
-define l = Character("Lione")
+define l = Character("Lione")#, image="lione_left")
 define a = Character("Aliza")
 define k = Character("Kim")
 define m = Character("Max")
@@ -17,7 +16,7 @@ define p = Character("Phoenix")
 # Cult Of Kai Members
 
 define v = Character("V.Len")
-define cw = Character("Cyrril War")
+define cw = Character("Cyrril War")#, image="cyrillwar_right")
 define bw = Character("Ben War")
 define g = Character("Guy")
 define pg = Character("Penny Greyback")
@@ -41,35 +40,14 @@ define ss = Character("Sloppy Scock")
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the universe !"
-
-    e "So lets Go"
-
     scene bg nexus 1
-
 
     "A crash site. Dead bodies scatter a rocky landscape. Pieces
 of futuristic metal embed the area. A silver haired young
 adult moans, gets up slowly, then falls back down."
 
 
-
+    show novanum_left at left
     nn "arr..."
 
     menu:
@@ -87,6 +65,8 @@ adult moans, gets up slowly, then falls back down."
     "you move forward and hear a noise coming from near the entrance to the ship"
     "Among the rubble and bodys you encounter a restless female whos alive"
     "As you move a box aside to help you see Long red hair, black uniform with shiny cyan, vertical strips down her arms and legs. Piercing eyes."
+
+    show lione_right at right
 
     l "(Groggy)
 Prisoner 30895... This is your
@@ -106,6 +86,9 @@ anyway..."
 enforcement, as well as damage of a
 prison ship..."
 
+    hide lione_right
+    show lione_left
+    show cyrillwar_right at right
     cw"I, Warden Cyrril War, place you,
 Lione Burgess, under arrest."
 
