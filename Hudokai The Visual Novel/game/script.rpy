@@ -42,8 +42,6 @@ define ss = Character("Sloppy Scock")
 # The game starts here.
 
 label start:
-    # variables init
-    $ social_stats = {"Insight":1,"Judgement":1,"Willpower":1,"Competence":1,"Understanding":1,"Charisma":1}
 
     scene bg nexus 1
 
@@ -121,11 +119,14 @@ menu:
 
 
 label after_menu:
-
+#remove cyrill.
 "Prisoner 30895 and LIONE RUN from a large robotic spider that gives
 chase."
 "Several reinforcement officers get in the way"
-"You can hear a strange sound comng from inside the ship and turn lifting you hand up to push through the officers and suddenly a ball of fire apperes in your hand"
+"You can hear a strange sound coming from inside the ship as the large robotic spider tank begins to move forward"
+#place arachnivolt image/animation.
+"You turn ,lifting you hand up to push through the officers"
+"suddenly a ball of fire apperes in your hand"
 menu:
     nn"What the hell !"
     "Panic":
@@ -134,23 +135,22 @@ menu:
         "Before the officers have a chance to advance you throw the ball of fire and it explodes just in front of them and creates a path for the two of you to escape through"
     #
 
+l"I don’t need you fighting my battles... especially not with that whacked out ability you have."
+nn"..."
+l"Tsk... my life in the hands of a mute, typical. Here’s a hint: Only rubber can absorb the electrical energy of our Arachnivolt tank bot. If its energy is taken, it will stop, otherwise it will perpetually repair itself."
 
-        l"I don’t need you fighting my battles... especially not with that whacked out ability you have."
-        nn"..."
-        l"Tsk... my life in the hands of a mute, typical. Here’s a hint: Only rubber can absorb the electrical energy of our Arachnivolt tank bot. If its energy is taken, it will stop, otherwise it will perpetually repair itself."
+"You continue to hear the sound of a large machine but so far you have only encounterd guards"
 
-        "You continue to hear the sound of a large machine but so far you have only encounterd guards"
+l"Look theres water over there by the tree"
 
-        l"Look theres water over there by the tree"
+"As you both clean your hands and drink the fresh cold water you hear a crashing from the direction you came"
+"Coming towards you is a machine spider tank"
 
-        "As you both clean your hands and drink the fresh cold water you hear a crashing from the direction you came"
-        "Coming towards you is a machine spider tank"
+l"Oh crud"
 
-        l"Oh crud"
+"Lione steps back and hits the tree"
 
-        "Lione steps back and hits the tree"
-
-        l"Prisoner 30985 quick use that power to combust the tree sap it might slow it down!"
+l"Prisoner 30985 quick use that power to combust the tree sap it might slow it down!"
 
 menu:
     nn"What should i do?"
@@ -158,8 +158,18 @@ menu:
         l"Smells like burning rubber..."
     "Collect the sap":
         l"You want to keep that? Fool! Throw it away on the Arachnivolt. There’s nowhere else to run... we have to fight it to stay alive..."
-#
 
+"Lione springs forward quickly charging the tank ,just as its raises itself up to swipe at her she drops to the floor skidding under it , you hear the sound of metal on metal"
+"As it continues towards you the see through sphere begins to vibrate , you take it out and a light shines out bathing the tank , you notice its slowed down enough for you to roll under its legs and out the way"
+"Lione grabs your jumpsuit and pulls you aside as the spiders head turns to face you and opens its mouth"
+"Its blast explodes the cliff face behind you and your flung high into the air above it"
+"you feel the the sphere in you pocket heating up and feel the fireball gathering in your hands"
+"you fire one off allowing you to gain your balance and aim"
+#show concept art 1
+"and unleash the other fireball directy into the airvents on the top as lione unleashes a flurry of sword attacks taking its legs off"
+
+l"You can thank me for my quick thinking, later... But don’t get me wrong,
+criminal, I am grateful for your help... but you’ve got me into some deep dung."
 
 
 
