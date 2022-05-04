@@ -1,28 +1,12 @@
-<<<<<<< Updated upstream
-Wed May  4 22:13:32 2022
-=======
-Wed May  4 22:11:03 2022
->>>>>>> Stashed changes
+Wed May  4 22:25:47 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
  
 
-Bootstrap to the start of init.init took 0.17s
-Early init took 0.00s
+Bootstrap to the start of init.init took 0.18s
+Early init took 0.01s
 Loader init took 0.04s
-<<<<<<< Updated upstream
-Loading error handling took 0.06s
-Loading script took 1.57s
-Loading save slot metadata. took 0.03s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.19s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.13s
-=======
-Loading error handling took 0.04s
+Loading error handling took 0.03s
 Loading script took 0.40s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
@@ -32,8 +16,7 @@ Loading analysis data took 0.04s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\44754\\AppData\\Roaming/RenPy/backups\\Hudokai The Visual Novel':
-Dump and make backups. took 0.14s
->>>>>>> Stashed changes
+Dump and make backups. took 0.13s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.05s
@@ -44,26 +27,15 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.08s
 Build styles took 0.01s
-<<<<<<< Updated upstream
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.12s
-=======
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.06s
-Prepare screens took 0.27s
->>>>>>> Stashed changes
+Prepare screens took 0.16s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.06s
+Save bytecode. took 0.04s
 Running _start took 0.00s
 Performance test:
-<<<<<<< Updated upstream
-Interface start took 0.15s
-=======
-Interface start took 0.21s
->>>>>>> Stashed changes
+Interface start took 0.14s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -75,13 +47,10 @@ Version: '4.6.0 - Build 30.0.100.9805'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096
-<<<<<<< Updated upstream
-=======
 Cleaning stores took 0.00s
 Init translation took 0.00s
-Build styles took 0.03s
+Build styles took 0.01s
 Load screen analysis took 0.04s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
->>>>>>> Stashed changes
