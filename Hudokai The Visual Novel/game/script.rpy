@@ -199,13 +199,35 @@ nn"The name’s... "
 no"Nova"
 l"I know who you are. Your report said more than enough to make me want to part ways with you."
 
+menu:
+    nn"What should i do?"
+    "We must stick together!":
+        l"I want to go on my own."
+        no"The only thing I remember is how to use my fists - that scares me. You know more about me than I do. You know who I am."
+        l"I know who you was. Tough. You don’t want to know, trust me."
+        no"Nor will I let you wander off in your condition. We’re staying together."
+        l"...Your heart is kinder than your report makes you out to have been. Okay... fine. Support me until we find a doctor. Then, maybe you can tell me what’s up with your weird ability."
+        no"The one that freezes enemies? I honestly don’t know."
+        l"You don’t?"
+        no"It’s like I can feel the energy near my body and then absorb it into me before releasing it at the enemy, again. "
+        no"I think it’s something to do with this sphere I have..."
+        l"*Hack* Hudokai?! That’s... the prison ship’s... stasis Hudokai... *cough*"
+        no"We’ll talk more when we find you some aid."
+    "Fine. Wander off. It’s your funeral.":
+        l"Like you care."
+    "I need to stick with you.":
+        l"Stick to the prison... it’s where you ultimately belong for the crime you committed."
+        no"You know more about me than I do."
+        l"You seem to remember how to cause violence just fine."
+        no"And that scares me."
+        l"I... need to find a doctor... before the warden returns."
+        no"Doesn’t it worry you that he targeted you for a crime I apparently committed?"
+        l"...Yes. I... need time to think. I... *cough* I need to know why the Hudokai stasis cells disengaged... and why you are even here."
+        no"I wonder if there’s any connection between that and the energy sphere I’ve been using in combat?"
+        l"That... was the... *cough* Hudokai? *hack* No... gotta go."
 
-
-
-
-
-
-
+no"Looks like there’s a town ahead..."
+#show nexus title screen with a fade.
 
 
 
