@@ -42,6 +42,8 @@ define ss = Character("Sloppy Scock")
 # The game starts here.
 
 label start:
+    # variables init
+    $ social_stats = {"Insight":1,"Judgement":1,"Willpower":1,"Competence":1,"Understanding":1,"Charisma":1}
 
     scene bg nexus 1
 
