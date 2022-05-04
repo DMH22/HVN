@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 175: end of line expected.
-    nn"Why are you such a bitch?":
-                                 ^
+File "game/script.rpy", line 171: reached end of line when expecting ':'.
+    while True
+              ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed May  4 21:50:15 2022
+Wed May  4 23:53:14 2022
