@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 171: reached end of line when expecting ':'.
-    while True
-              ^
+File "game/script.rpy", line 232: expected 'label_name_declare' not found.
+    label :
+         ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed May  4 23:53:14 2022
+Thu May  5 14:48:54 2022

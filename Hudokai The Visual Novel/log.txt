@@ -1,4 +1,4 @@
-Wed May  4 23:26:13 2022
+Thu May  5 14:49:15 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
  
@@ -7,13 +7,13 @@ Bootstrap to the start of init.init took 0.18s
 Early init took 0.00s
 Loader init took 0.04s
 Loading error handling took 0.04s
-Loading script took 0.39s
+Loading script took 0.42s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.11s
+Running init code took 0.14s
 Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
+Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\44754\\AppData\\Roaming/RenPy/backups\\Hudokai The Visual Novel':
 Dump and make backups. took 0.16s
@@ -29,13 +29,13 @@ Init translation took 0.08s
 Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.03s
-Save screen analysis took 0.07s
-Prepare screens took 0.13s
+Save screen analysis took 0.06s
+Prepare screens took 0.12s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.13s
+Interface start took 0.15s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -47,10 +47,3 @@ Version: '4.6.0 - Build 30.0.100.9805'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s

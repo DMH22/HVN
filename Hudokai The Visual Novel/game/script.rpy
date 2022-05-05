@@ -36,8 +36,8 @@ define s = Character("Smaz")
 define ph = Character("Phyllis")
 define ss = Character("Sloppy Scock")
 
-#Background List
-#Nexus
+#Area List
+#Nexus - Nexus Cliffside - Crash site - Achevment House - Cafe-Doctors - Item Shop - Inn - Church - Roke's House - Max's House - Train Station - Town Watch Tower
 
 
 # The game starts here.
@@ -228,6 +228,8 @@ menu:
 
 no"Looks like there’s a town ahead..."
 #show nexus title screen with a fade.
+
+
 
 
 
