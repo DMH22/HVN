@@ -39,6 +39,10 @@ define ss = Character("Sloppy Scock")
 #Area List
 #Nexus - Nexus Cliffside - Crash site - Achevment House - Cafe-Doctors - Item Shop - Inn - Church - Roke's House - Max's House - Train Station - Town Watch Tower
 
+#Journal Variables
+default journal001 = False
+default seen_nexus_scene_1 = False
+default floored = False
 
 # The game starts here.
 
@@ -222,7 +226,7 @@ label after_menu:
 
     no"Looks like there’s a town ahead..."
     #show nexus title screen with a fade.
-
+$ journal001 = True
 
 #Area List
 #Nexus - Nexus Cliffside - Crash site - Achevment House -
@@ -257,6 +261,10 @@ label nexus:
 label nexus_Cliffside:
     scene red
     "You are at Nexus Cliffside."
+    if journal001:
+        no"The wardens back that way we better stay away"
+    else:
+        no"i can see the town from here"
     menu:
         "return to nexus":
             jump nexus
@@ -265,6 +273,10 @@ label nexus_Cliffside:
 label crash_site:
     scene red
     "You are at the crash site."
+    if journal001:
+        no"The wardens back that way we better stay away"
+    else:
+        no"i can see the town from here"
     menu:
         "return to nexus":
             jump nexus
@@ -273,6 +285,12 @@ label crash_site:
 label achevment_house:
     scene red
     "You are at the Achevment House."
+    if journal001:
+        "worker""Sorry we arent open until the next cycle, come back later"
+        no"Any suggestions?"
+        "worker""Maybe try some shops around town"
+    else:
+        "worker""Welcome"
     menu:
         "return to nexus":
             jump nexus
@@ -281,6 +299,21 @@ label achevment_house:
 label item_shop:
     scene red
     "You are at the Item Shop."
+    if journal001:
+        "worker""Sorry we arent open until the next cycle, come back later"
+        no"Any suggestions?"
+        "worker""Maybe try some shops around town"
+    else:
+        "worker""Welcome"
+    if seen_nexus_scene_1:
+        " Nova turns and looks through the window. But the other him isn’t in there. Tense. Suddenly, regreting his chooses, hes punched in the face and floored by a stranger."
+        "The stranger quickly pats Nova's body down and then runs off."
+        no"Worse things have happened today."
+        no"Oi!"
+        $ floored = True
+        jump nexus
+    else:
+        "worker""Welcome"
     menu:
         "return to nexus":
             jump nexus
@@ -289,6 +322,16 @@ label item_shop:
 label inn:
     scene red
     "You are at the Inn."
+    if journal001:
+        "worker""Sorry we arent open until the next cycle, one second is that women hurt?"
+        no"Maybe...?"
+        l"Yes im hurt"
+        "worker""We have a doctor who works here part time, come this way"
+        $ journal001 = False
+        jump nexus_scene_1
+
+    else:
+        "worker""Welcome would you like to rest or see a doctor?"
     menu:
         "return to nexus":
             jump nexus
@@ -297,6 +340,10 @@ label inn:
 label roke_house:
     scene red
     "You are at the Roke's House."
+    if journal001:
+        r"GET THE HELL OUTTA HERE BRAT"
+    else:
+        r"Welcome kid"
     menu:
         "return to nexus":
             jump nexus
@@ -305,6 +352,10 @@ label roke_house:
 label max_house:
     scene red
     "You are at Max's House."
+    if journal001:
+        no"This house has been set alight but theres no damage to the surrounding buildings?"
+    else:
+        no"What a dump!"
     menu:
         "return to nexus":
             jump nexus
@@ -313,6 +364,10 @@ label max_house:
 label train_station:
     scene red
     "You are at the Train Station."
+    if journal001:
+        no" It looks like theres no train here right now"
+    else:
+        no"The trains here"
     menu:
         "return to nexus":
             jump nexus
@@ -321,10 +376,36 @@ label train_station:
 label town_watch_tower:
     scene red
     "You are at the Town Watch Tower."
+    if journal001:
+        no"Because large dark towers dont scream OMINOUS!"
+    else:
+        no"Nope"
     menu:
         "return to nexus":
             jump nexus
     return
+
+label nexus_scene_1:
+    scene red
+    "Nova leaves Lione in the care of the doctor and leaves the inn"
+    "Nova shakily TRAVELS down an alley towards the town. As he does so, a crimson armoured solider turns to him in the alley."
+    f"Yo, we’ve found the Hudokai, so there’s no need to worry. See ya back at the station."
+    "He walks off, leaving the Nova confused."
+    no"Who.."
+    "Nova turns the corner only to see another Nova walking down the path towrds him."
+    "He hides and watches as this strange other version of himself walks by."
+    no"I have to find out what’s going on."
+    $ seen_nexus_scene_1 = True
+    menu:
+        no"Im so confused ,what should i do?"
+        "Follow Him":
+            no"I need answers now"
+            jump item_shop
+
+        "Explore":
+            no"ill look for answers later"
+            jump nexus
+
 
     # This ends the game.
 return

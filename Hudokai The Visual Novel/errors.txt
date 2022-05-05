@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 223: Only one say menuitem may exist per menu.
-    no"Looks like there’s a town ahead..."
-                                          ^
+File "game/script.rpy", line 362: end of line expected.
+    no"What’s going on? Why the hell did you punch me?":
+                                                       ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu May  5 16:56:23 2022
+Thu May  5 22:51:49 2022
