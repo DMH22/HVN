@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 232: expected 'label_name_declare' not found.
-    label :
-         ^
+File "game/script.rpy", line 223: Only one say menuitem may exist per menu.
+    no"Looks like there’s a town ahead..."
+                                          ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu May  5 14:48:54 2022
+Thu May  5 16:56:23 2022
