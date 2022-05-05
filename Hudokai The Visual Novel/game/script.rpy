@@ -241,14 +241,10 @@ label nexus:
                 call crash_site
             "Achevment House":
                 call achevment_house
-            "Cafe-Doctors":
-                call cafe_doctors
             "Item Shop":
                 call item_shop
             "Inn":
                 call inn
-            "Church":
-                call church
             "Roke's House":
                 call roke_house
             "Max's House":
@@ -282,14 +278,6 @@ label achevment_house:
             jump nexus
     return
 
-label cafe_doctors:
-    scene red
-    "You are at the Cafe-Doctors."
-    menu:
-        "return to nexus":
-            jump nexus
-    return
-
 label item_shop:
     scene red
     "You are at the Item Shop."
@@ -301,14 +289,6 @@ label item_shop:
 label inn:
     scene red
     "You are at the Inn."
-    menu:
-        "return to nexus":
-            jump nexus
-    return
-
-label church:
-    scene red
-    "You are at the Church."
     menu:
         "return to nexus":
             jump nexus
