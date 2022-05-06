@@ -329,7 +329,10 @@ label inn:
         jump nexus_scene_1
 
     else:
-        "worker""Welcome would you like to rest or see a doctor?"
+        "worker""Welcome here take a bed and sleep"
+
+    if seen_nexus_scene_4:
+        jump nexus_scene_5
     menu:
         "return to nexus":
             jump nexus
@@ -369,6 +372,8 @@ label train_station:
         no" It looks like theres no train here right now"
     else:
         no"The trains here"
+    if seen_nexus_scene_3:
+        jump nexus_scene_4
     menu:
         "return to nexus":
             jump nexus
@@ -425,11 +430,105 @@ label nexus_scene_3:
         "I’m gonna punch you.":
             "Nova's fist flashs out catching the strager in the face"
             no"TELL ME!"
+    m"I punch whoever I feel like."
+    no"I knockout whoever I feel like."
+    m"I especially punch mouthy bastards like you, looking lost in this world of survival."
+    m"There’s no point if we’re already prisoners of the Nexus..."
+    no"So what if I am lost?"
+    m"Then you’re new in town."
+    "They relax a bit more."
+    no"Yeah. Tell me the way out and we’ll call it quits."
+    m"I’ll call it quits when I finally get a phone to do so."
+    no"You... That’s why you floored me and searched my pockets. Why do you want a phone so bad?"
+    m"You’re new. You might have had a phone or a memory of outside of town... I’ve been here so long that the only thing I remember is setting fire to my house... I never forget it. I try to remember more by sitting on what remains of the roof, every midnight."
+    "Max looks pained."
+    m"Fluffing crap, bollocks, scock!"
+    menu:
+        "You won’t have a scock if you don’t tell me what I want to know.":
+            m"Did you ever call your dad?"
+            no"What?"
+            m"Did you ever call him to ask how he was?"
+            no"I... honestly don’t remember. I... I don’t remember anything before coming here."
+            m"They say those who remember, those who are the strongest, are the first to go."
+            "Max leaves."
+        "Look, forget I said anything. I just wanna know how to leave.":
+            m"Why?"
+            no"Didn’t you hear me? I’m lost. I need to get home."
+            m"But home’s here. Those who don’t understand that are arseholes. Arseholes who turn their back on their home... their family... their world."
+            no"Forget it. I’ll survive on my own, thanks."
+            "Nova walks away, shaking his head. Max leaves. As Nova walks away from him he spots someone walking by and heads towards him."
+            no"‘Scuse me. Can you tell me the way out of this town?"
+            "The person looks horrified."
+            "Crazy-Man""You’ll be the next one taken!"
+            no"What the hell’s wrong with this town?!"
+            no"I wonder if there’s any transport to get me out of here? I’ll try up north of the town."
+            $ seen_nexus_scene_3 = True
     menu:
         "return to nexus":
             jump nexus
 
+label nexus_scene_4:
+    no"I wonder what’s beyond this town..."
+    "Nova boards the train, but after a few mnuests of the trains shaking mvement he finds himself back to the same train station. All town exits take them back to the town."
+    no"That’s strange. So I can’t leave the town? It’s like that messy haired mugger said. I have to find him, otherwise we’re stuck here."
+    "A man walks out of the shadows."
+    "MATT""I’ve been watching you."
+    no"So I’ve noticed."
+    "MATT""I’m Matt. I watch all newcomers to the Nexus."
+    no"What’s the Nexus?"
+    "MATT""You feel weak from all that’s happened, today. It’s best you find somewhere to rest, first. Ask me again, tomorrow. Don’t look for me. I’ll find you."
+    "MATT disappears, quite literally."
+    no"I hate people telling me what to do."
+    $ seen_nexus_scene_4 = True
+    menu:
+        "return to nexus":
+            jump nexus
+
+label nexus_scene_5:
+        "Nova manages to doze off"
+        "A SHORT WHILE LATER"
+        "BANG"
+        f"He’s here, somewhere..."
+        "person""Aaaaaaargh!"
+        f"No, the one we want has silver hair. What’s in this room?"
+        no"I have to hide!"
+        menu:
+            "better hide but where"
+            "Floorboards":
+                    "FOLTIX and GEIST enter the room, killing several people as they wake up."
+                    f"This is the last room. Search!"
+                    "GEIST""..."
+                    f"I don’t care. It’s my head on the line if the boss finds out. How was I supposed to know it wasn’t you?"
+                    f"I mentioned Hudokai, that’s what I did, Geist! He mustn’t know. He needs eliminating."
+                    f"He isn’t here. Fluff! He must’ve escaped. All right, Geist, think. Where would you go if you were him?"
+            "Under the bed":
+                    f"This is the last room. Search the beds!"
+                    "GEIST""..."
+                    f"All right. How about we flush him out? Destroy the beds and wardrobe. Make sure they’re no hiding places!"
+                    "Nova quickly rolls from under the bed and under the nearest curtain"
+                    f"I dread to think if that boy already has some Hudokai, thanks to me. Geist, he must be eliminated!"
+                    "Nova holds his breath tryig not to breath"
+                    f"He isn’t here. The boss is gonna go mad! Keep searching the town!"
+            "Haystack":
+                    f"The haystack! Set fire to it. Kill all witnesses"
+                    "GEIST""..."
+                    "Geist moves forward setting the haystack alight and nova leaps out"
+                    f"There he is! No silver haired clone will get away with the Hudokai info! Exterminate him."
+                    #GAME OVER
+            "Behind Curtains":
+                    "FOLTIX and GEIST enter the room, killing several people as they wake up."
+                    f"This is the last room. Search!"
+                    "GEIST""..."
+                    f"I don’t care. It’s my head on the line if the boss finds out. How was I supposed to know it wasn’t you?"
+                    f"I mentioned Hudokai, that’s what I did, Geist! He mustn’t know. He needs eliminating."
+                    f"He isn’t here. Fluff! He must’ve escaped. All right, Geist, think. Where would you go if you were him?"
+        $ seen_nexus_scene_5 = True
+        menu:
+            "return to nexus":
+                jump nexus
 
 
-    # This ends the game.
+
+
+# This ends the game.
 return
