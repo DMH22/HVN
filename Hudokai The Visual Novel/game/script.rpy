@@ -42,7 +42,7 @@ define ss = Character("Sloppy Scock")
 #Journal Variables
 default journal001 = False
 default seen_nexus_scene_1 = False
-default floored = False
+default seen_nexus_scene_2 = False
 
 # The game starts here.
 
@@ -123,7 +123,7 @@ label after_menu:
     chase."
     "Several reinforcement officers get in the way"
     "You can hear a strange sound coming from inside the ship as the large robotic spider tank begins to move forward"
-    #place arachnivolt image/animation.
+    #show gp_battler
     "You turn ,lifting you hand up to push through the officers"
     "suddenly a ball of fire apperes in your hand"
     menu:
@@ -134,6 +134,7 @@ label after_menu:
             "Before the officers have a chance to advance you throw the ball of fire and it explodes just in front of them and creates a path for the two of you to escape through"
         #
 
+    #hide gp_battler
     l"I don’t need you fighting my battles... especially not with that whacked out ability you have."
     nn"..."
     l"Tsk... my life in the hands of a mute, typical. Here’s a hint: Only rubber can absorb the electrical energy of our Arachnivolt tank bot. If its energy is taken, it will stop, otherwise it will perpetually repair itself."
@@ -144,6 +145,7 @@ label after_menu:
 
     "As you both clean your hands and drink the fresh cold water you hear a crashing from the direction you came"
     "Coming towards you is a machine spider tank"
+    #show arachnivolt
 
     l"Oh crud"
 
@@ -166,6 +168,7 @@ label after_menu:
     "you fire one off allowing you to gain your balance and aim"
     #show concept art 1
     "and unleash the other fireball directy into the airvents on the top as lione unleashes a flurry of sword attacks taking its legs off"
+    # hide arachnivolt
 
     l"You can thank me for my quick thinking, later... But don’t get me wrong,
     criminal, I am grateful for your help... but you’ve got me into some deep dung."
@@ -306,12 +309,7 @@ label item_shop:
     else:
         "worker""Welcome"
     if seen_nexus_scene_1:
-        " Nova turns and looks through the window. But the other him isn’t in there. Tense. Suddenly, regreting his chooses, hes punched in the face and floored by a stranger."
-        "The stranger quickly pats Nova's body down and then runs off."
-        no"Worse things have happened today."
-        no"Oi!"
-        $ floored = True
-        jump nexus
+        jump nexus_scene_2
     else:
         "worker""Welcome"
     menu:
@@ -406,6 +404,13 @@ label nexus_scene_1:
             no"ill look for answers later"
             jump nexus
 
+label nexus_scene_2:
+    " Nova turns and looks through the window. But the other him isn’t in there. Tense. Suddenly, regreting his chooses, hes punched in the face and floored by a stranger."
+    "The stranger quickly pats Nova's body down and then runs off."
+    no"Worse things have happened today."
+    no"Oi!"
+    $ seen_nexus_scene_2 = True
+    jump nexus
 
     # This ends the game.
 return
