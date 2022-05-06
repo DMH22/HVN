@@ -354,6 +354,9 @@ label max_house:
         no"This house has been set alight but theres no damage to the surrounding buildings?"
     else:
         no"What a dump!"
+    if seen_nexus_scene_2:
+        jump nexus_scene_3
+
     menu:
         "return to nexus":
             jump nexus
@@ -411,6 +414,22 @@ label nexus_scene_2:
     no"Oi!"
     $ seen_nexus_scene_2 = True
     jump nexus
+
+label nexus_scene_3:
+    "Nova catches up with the stranger and tackles him to the floor"
+    "Both of them raise there hands ready to fight"
+    menu:
+        "What’s going on?":
+            "Why the hell did you punch me?"
+            "The pair begin to cycle each other"
+        "I’m gonna punch you.":
+            "Nova's fist flashs out catching the strager in the face"
+            no"TELL ME!"
+    menu:
+        "return to nexus":
+            jump nexus
+
+
 
     # This ends the game.
 return
