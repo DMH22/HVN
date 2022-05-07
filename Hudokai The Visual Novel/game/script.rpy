@@ -43,6 +43,9 @@ define ss = Character("Sloppy Scock")
 default journal001 = False
 default seen_nexus_scene_1 = False
 default seen_nexus_scene_2 = False
+default seen_nexus_scene_3 = False
+default seen_nexus_scene_4 = False
+default seen_nexus_scene_5 = False
 
 # The game starts here.
 
@@ -228,14 +231,13 @@ label after_menu:
             l"That... was the... *cough* Hudokai? *hack* No... gotta go."
 
     no"Looks like there’s a town ahead..."
+    $ journal001 = True
     #show nexus title screen with a fade.
-$ journal001 = True
 
-#Area List
+
+#Nexus Area List
 #Nexus - Nexus Cliffside - Crash site - Achevment House -
 #Cafe-Doctors - Item Shop - Inn - Church - Roke's House - Max's House - Train Station - Town Watch Tower
-
-
 label nexus:
     # scene bg_town
     while True:
@@ -370,7 +372,7 @@ label train_station:
     scene red
     "You are at the Train Station."
     if journal001:
-        no" It looks like theres no train here right now"
+        no"It looks like theres no train here right now"
     else:
         no"The trains here"
     if seen_nexus_scene_3:
