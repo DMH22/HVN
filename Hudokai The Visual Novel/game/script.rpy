@@ -539,9 +539,99 @@ label nexus_scene_5:
 
 
 label nexus_scene_6:
-        menu:
-            "return to nexus":
-                jump nexus
+    "Night falls across the nexus"
+    "Nova explores the Nexus in his search for MAX."
+    "He finds him on the rooftop, alone. He joins him on top of the burnt house."
+    m"I burnt this place. I burnt it down."
+    no"You can’t burn the past... only forget it."
+    m"How can I forget how he looked at me as he left? My dad, I mean. He just left me and mum alone. I hated him. I hated the house he bought us."
+    no"If it helps, I don’t remember my dad. Not yet, anyway. I think I have amnesia."
+    m"So you’ve come to me for answers? I should ask you some questions, myself, with that prison garb and stuff. Fine, what do you want to know?"
+    menu:
+        "What’s Hudokai?":
+            m"Budokai?"
+            no"Hudokai."
+            m"I honestly don’t know."
+        "Why can’t I escape this town?":
+            m"You’re prisoner to the Nexus. It’s what everyone calls this town. I don’t know why, but there’s no fluffing way of leaving. Everyone’s trapped in this limbo."
+            no"And how did you end up here?"
+            m"I bombed my house. I didn’t just set it alight. But when I set off the charge, a large black hole appeared in the centre of the house. About the size of a small building. It fluffing pulled me and the house through into this place. I’ve never been able to escape."
+        "Why’d you attack me earlier?":
+            m"You have no phone, no food, no anything. I have to mug to survive. I thought I made that clear. All I have is my burnt house."
+        "I’m being hunted by an armoured killer!":
+            m"Foltix?"
+            no"A friend of yours?"
+            m"You’d best get out of here, idiot! Everyone knows Foltix. He’s part of the Town Watch."
+            no"Sounds friendly for a maliciously murderous group!"
+            m"He’s right-hand to the Town Watch leader, Greg. No one knows what he looks like. He always keeps hidden and yet... he always knows what’s going on."
+            no"And you all let him lead you?"
+            m"Well, he watches over us. Sometimes horrible monsters get sucked into this town. The Town Watch exterminates them. They are the law, here. No one knows Greg’s true motives, though. He has nothing to gain from this all."
+            " FOLTIX appears out of nowhere and charges at the building at warp speed."
+            "He jumps across the gap and tackles Nova but catches Max."
+            "The world spirals away. Darkness. Flashes of light reveal FOULTIX violently attacking Nova."
+            "The darkness fades away."
+            "Nova, beaten and bruised. He can barely stand."
+            "FOLTIX is in front of him."
+            f"Welcome to my world of pain - the Dark Dimension."
+            no"Another dimension?!"
+            "FOLTIX attacks Nova once more, forcing him back."
+            f"Hudokai. You know too much. I am deeply sorry for the slip of my tongue, though. Really, I am. If I hadn’t confused you with my good pal, Geist, I wouldn’t have to do this."
+            no"I don’t even know what Hudokai is!"
+            f"Liar. Prepare to duel to the death."
+            "No matter what nova trys his attacks will not hit foltix who toys with him until he bacomes bored"
+            "Nova manages to fake to the left and shoot foltix with a fireball"
+            no"How d’you like that?"
+            f"Hudokai! You already have some Hudokai! Fiend! Let me show you what Hudokai can really do... and why we at the Watch are the true owners!"
+            "Foltix unleashes a bolt of lighting trapping nova"
+            "Suddenly, FOLTIX is attacked from behind by Max."
+            f"Looks like I kidnapped another cockroach. My bad."
+            "FOLTIX turns to face Max."
+            m"Take me back! I’ve done nothing to the Town Watch!"
+            f"Hmm. I... won’t touch you."
+            m"Huh?"
+            f"This complicates things. Of all the people to bump into... please forgive me, Max."
+            m"You can’t be..."
+            no"You heard him! Take... *hack* us back!"
+            f"Still ticking? It can’t be helped. I must leave. Sorry about this Dark Dimension business. It’s the furthest I could take you. I must check on the Hudokai store!"
+            "FOLTIX disappears from existence, seemingly. Max looks around, then goes to Nova."
+            m"Yo, you all right?"
+            menu:
+                "(I’m fine)":
+                    no"I’m fine"
+
+                "(I’ve seen better days)":
+                    no"I’ve seen better days"
+
+                "(I’m really fluffing hurt, you bitch)":
+                    no"I’m really fluffing hurt, you bitch"
+            "MATT appears out of nowhere."
+            "MATT""He’ll be fine, now that I’m here."
+            m"Fluffing hell, who the fluff are you?"
+            "MATT""There’s no need for such language."
+            no"Matt..."
+            "MATT""We’re at the edge of the void. Foltix lied. We’re not in any dimension."
+            no"...You came early."
+            "MATT""Nope. It’s gone midnight. I kept my word and here I am. Let’s go."
+            "MATT spins around and the world fades back to Max’s house."
+            m"How did you take us back?"
+            "MATT""It’s time. Take Mr. Nova inside your burnt tent of a place and rest up. He’s bruised, but will heal with some curative Hudokai."
+            m"Curative Hudokai? What the fluff?"
+            no"Do it..."
+            "Max takes Nova inside, leaving MATT outside alone."
+            "MATT""It’s a new day."
+            "The remander of the night passes without insident"
+            "Max standing outside of the house and MATT walking back and forth. Nova walks out of the house, slowly."
+            no"I feel incredible."
+            "MATT""That’s the curative Hudokai."
+            m"What the fluff is Hudokai, anyway?"
+            "MATT""Today I won’t be answering your questions, but handing you over to a more experienced fighter of the Nexus."
+
+
+
+
+    menu:
+        "return to nexus":
+            jump nexus
 
 # This ends the game.
 return

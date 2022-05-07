@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 526: expected menuitem
-    $see_nexus_scene_5 = True
-    ^
+File "game/script.rpy", line 599: choice menuitem expects a non-empty block.
+    "(I’m fine)":
+                 ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri May  6 21:26:03 2022
+Sat May  7 19:26:46 2022
