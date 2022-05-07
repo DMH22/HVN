@@ -1,36 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 43, in script
-    define journal1 = false
-  File "game/script.rpy", line 43, in script
-    define journal1 = false
-  File "game/script.rpy", line 43, in <module>
-    define journal1 = false
-NameError: name 'false' is not defined
+  File "game/script.rpy", line 258, in script call
+    call max_house
+  File "game/script.rpy", line 362, in script
+    if seen_nexus_scene_5:
+  File "game/script.rpy", line 362, in <module>
+    if seen_nexus_scene_5:
+NameError: name 'seen_nexus_scene_5' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 560, in main
-    renpy.game.context().run(node)
-  File "game/script.rpy", line 43, in script
-    define journal1 = false
-  File "game/script.rpy", line 43, in script
-    define journal1 = false
-  File "renpy/ast.py", line 2213, in execute
-    self.set()
-  File "renpy/ast.py", line 2224, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "game/script.rpy", line 258, in script call
+    call max_house
+  File "game/script.rpy", line 362, in script
+    if seen_nexus_scene_5:
+  File "renpy/ast.py", line 1898, in execute
+    if renpy.python.py_eval(condition):
+  File "renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
   File "renpy/python.py", line 2269, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 43, in <module>
-    define journal1 = false
-NameError: name 'false' is not defined
+  File "game/script.rpy", line 362, in <module>
+    if seen_nexus_scene_5:
+NameError: name 'seen_nexus_scene_5' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Hudokai The Visual Novel 1.0
-Thu May  5 21:01:01 2022
+Sat May  7 12:04:30 2022

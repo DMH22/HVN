@@ -359,7 +359,8 @@ label max_house:
         no"What a dump!"
     if seen_nexus_scene_2:
         jump nexus_scene_3
-
+    if seen_nexus_scene_5:
+        jump nexus_scene_6
     menu:
         "return to nexus":
             jump nexus
@@ -522,13 +523,23 @@ label nexus_scene_5:
                     f"I don’t care. It’s my head on the line if the boss finds out. How was I supposed to know it wasn’t you?"
                     f"I mentioned Hudokai, that’s what I did, Geist! He mustn’t know. He needs eliminating."
                     f"He isn’t here. Fluff! He must’ve escaped. All right, Geist, think. Where would you go if you were him?"
+        no"No, I can’t wait for Matt. I’m not safe. I need to find that messy haired mugger punk right now for answers. He said he liked to stay up at night on a rooftop..."
+        "PERSON""Will he heal us of our wounds? Let’s hurry!"
+        no"Um... no. I was talking to myself."
+        "PERSON""And you do that often when people are dying around you?"
+        no"..."
+        "Nova leaves"
+
         $ seen_nexus_scene_5 = True
         menu:
             "return to nexus":
                 jump nexus
 
 
-
+label nexus_scene_6:
+        menu:
+            "return to nexus":
+                jump nexus
 
 # This ends the game.
 return
