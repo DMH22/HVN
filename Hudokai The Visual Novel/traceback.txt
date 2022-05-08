@@ -1,36 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 254, in script call
+  File "game/script.rpy", line 268, in script call
+    call town_watch_tower
+  File "game/script.rpy", line 260, in script call
     call inn
-  File "game/script.rpy", line 254, in script call
+  File "game/script.rpy", line 264, in script call
+    call max_house
+  File "game/script.rpy", line 264, in script call
+    call max_house
+  File "game/script.rpy", line 266, in script call
+    call train_station
+  File "game/script.rpy", line 260, in script call
     call inn
-  File "game/script.rpy", line 334, in script
-    if seen_nexus_scene_4:
-  File "game/script.rpy", line 334, in <module>
-    if seen_nexus_scene_4:
-NameError: name 'seen_nexus_scene_4' is not defined
+  File "game/script.rpy", line 252, in script call
+    call nexus_Cliffside
+  File "game/script.rpy", line 268, in script call
+    call town_watch_tower
+  File "game/script.rpy", line 417, in script call
+    call top_floor
+  File "game/script.rpy", line 254, in script call
+    call crash_site
+  File "game/script.rpy", line 285, in script
+    if seen_nexus_scene_9 = False:
+SyntaxError: invalid syntax (script.rpy, line 285)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 254, in script call
+  File "game/script.rpy", line 268, in script call
+    call town_watch_tower
+  File "game/script.rpy", line 260, in script call
     call inn
-  File "game/script.rpy", line 254, in script call
+  File "game/script.rpy", line 264, in script call
+    call max_house
+  File "game/script.rpy", line 264, in script call
+    call max_house
+  File "game/script.rpy", line 266, in script call
+    call train_station
+  File "game/script.rpy", line 260, in script call
     call inn
-  File "game/script.rpy", line 334, in script
-    if seen_nexus_scene_4:
+  File "game/script.rpy", line 252, in script call
+    call nexus_Cliffside
+  File "game/script.rpy", line 268, in script call
+    call town_watch_tower
+  File "game/script.rpy", line 417, in script call
+    call top_floor
+  File "game/script.rpy", line 254, in script call
+    call crash_site
+  File "game/script.rpy", line 285, in script
+    if seen_nexus_scene_9 = False:
   File "renpy/ast.py", line 1898, in execute
     if renpy.python.py_eval(condition):
-  File "renpy/python.py", line 2276, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 334, in <module>
-    if seen_nexus_scene_4:
-NameError: name 'seen_nexus_scene_4' is not defined
+  File "renpy/python.py", line 2274, in py_eval
+    code = py_compile(code, 'eval')
+  File "renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: invalid syntax (script.rpy, line 285)
 
-Windows-7-6.1.7601-SP1
+Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Hudokai The Visual Novel 1.0
-Sat May  7 16:03:19 2022
+Sun May  8 21:14:26 2022

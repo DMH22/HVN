@@ -50,6 +50,7 @@ default seen_nexus_scene_6 = False
 default seen_nexus_scene_7 = False
 default seen_nexus_scene_8 = False
 default seen_nexus_scene_9 = False
+default nexus_p1_complete  = False
 
 # The game starts here.
 
@@ -286,6 +287,8 @@ label crash_site:
         no"The wardens back that way we better stay away"
     else:
         no"i can see the town from here"
+    if seen_nexus_scene_9:
+        jump nexus_scene_10
     menu:
         "return to nexus":
             jump nexus
@@ -458,6 +461,7 @@ label floor_3:
             jump floor_4
 label floor_4:
     "The group enter through a door into a room with a movng floor"
+    "they also notice 2 locked doors on ether side of the room"
     "after being split up multile times lione stands on the right tile and arrives at the stairs to the final room"
     "she tells Nova and Max who join her"
     menu:
@@ -919,11 +923,151 @@ label nexus_scene_9:
     gg"Until today. You put a stupid little “Matt plan” into action. You knew I’d notice you assembling that silly squad of kids. Why bother?"
     "Matt""I thought you had all the answers, dawg."
     "Another electrical charge ravages MATT."
-    
+    gg"You knew you couldn’t escape Foltix or Geist, otherwise you wouldn’t have been dragged here by Mr. Silver Hair himself! So answer me!"
+    "Matt""I... Wanted you to see them grow... in strength. They’re a threat..."
+    gg"They’re a threat to no one."
+    "Matt""That’s not what Foltix experienced..."
+    "More electrical torture."
+    gg"I wanted to hear it from your own mouth and there we have it! If these reckless kids can damage Hudokai infused armour with just Roke’s limited training, I wonder how they’ll fair against me in 3... 2... 1..."
+    "An explosion erupts the rafters where the group are standing. Nova and Lione fall to the floor, in front of Matt’s device. They land awkwardly. Nova tries to get up, but is too hurt. Green gas starts to hiss in through the sides of the room."
+    "Matt""Oh man, now look at what you’ve done... too much curry, I say. *cough*"
+    "Out of the shadows and into the gas walks a silhouette with one gleaming eye. The gas clears around him as he walks towards his prisoners. Dark hair, seeming to grey, plaited behind him. A black vest trimmed with gold and trousers of a dark grey. GREG."
+    gg"So you’re the kids who got lucky and found out about Hudokai. I’ve been keenly expecting you."
+    no"I figured, from the explosives! *cough*"
+    gg"Foltix was my best friend and you beat the living crap out of him. Now, I think it’s time I returned the favour with some interest!"
+    "Matt""Aw man, I hate additional charges."
+    "GREG electrocutes them all on the spot using nothing but his hands."
+    no"The gas isn’t affecting... Him! He must be immune... through Hudokai?"
+    gg"Wouldn’t you like to know?"
+    "GREG walks to the top of the room before stopping."
+    gg"Goodnight, tiddly kiddies. I’m off to fix me a prison ship."
+    "He leaves."
+    l"How the hell did he know?"
+    "Matt""Don’t look at me! *hack hack*"
+    no"My body... is losing... use."
+    "Nova collapses, as does everyone else. Max stands alone in the rafters."
+    m"I should go after Greg, but... they look they’ll die without my help. But... "
+    m"if they could do that much damage to Foltix, my alternate self, imagine what they could do to me. Oh, fluff it. I need to look for a way to save them!"
+    "Max follows he path around and finds himself in the room next to all the moving tiles"
+    "He finds a switch that opens both the locked doors the group had found earlyer "
+    "Max quickly finds the right tile and find what looks to be gregs room"
+    menu:
+        "Max finds a set of switchs with light turned on and up to the max"
+        "Yes to switch off":
+            m"Why does Greg have a button for poison gas... in his bedroom?"
+        "No to switch off":
+            m"Yeah. I'll let them all die. Then I can live my life in peace in the Nexus..."
+    "Max hits the switch and all the light turn of on the board"
+    "A notice apperes saying the floor tiles have been deativate"
+    "Max follows the route they took up the stair and sees the gas has gone"
+    "He climbs down and goes to the others"
+    m"Get up! You’re not dead, yet. There’s no way."
+    no"*Hack* ...Ohhhh!"
+    m"‘Sup?"
+    menu:
+        "I feel like my head’s been pummelled by a sledgehammer.":
+            no"Thanks for taking you sweet time."
+        "I feel like someone’s ...":
+            no"I feel like someone’s used an Effron Pistol on my head."
+    m"I’m sure it’s not that bad. I had to navigate some stupid tiles."
+    l"I’ve had work dos leave worse hang overs than this!"
+    no"Don’t you start."
+    "Roke’s voice can be heard on the short wave radio talkie."
+    "Roke""I’ve analysed this friggen hunk o’ crap and I reckon the throttle, we need, is in that tower o’ Greg’s."
+    l"You’re probably right. I’d say whatever sprayed that gas is exactly the kind of throttle we need on the ship. Oh man, my head’s spinning after all."
+    "Roke""Anyway, you runts bring the part here and... hey, get off! You daren’t mess with me. Get.."
+    "An explosion is heard."
+    cw"Lightning Hudokai of the second level. Just think what the power of Hudokai can do when it’s levelled up to its maximum potential."
+    l"Warden, sir! What happened? Were you attacked? We found Greg, a member of the Cult of.."
+    cw"Still alive and a blind fool, to boot!"
+    l"Blind?"
+    no"Deaf, too. Give it up, Lione, he’s obviously deceiving us. I think... I remember fully, now..."
+    "Cutscene of ship crashing. Shows Warden CYRRIL reconnecting the ship’s engines to the Hudokai power supply, shutting down the prisons and causing a massive explosion. They crash through a black hole and into the Nexus."
+    cw"The experiment worked. It almost killed us all, but it worked."
+    l"I-I... looked up to you!"
+    "Matt""It’s been one of those days when respect is just a hollow hotdog."
+    cw"Vice-Warden, I command you to bring the part to me, immediately."
+    l"Hell no! I don’t take orders from some... some crooked warden!"
+    cw"If you don’t come, then no one escapes on this day. Choose."
+    $ seen_nexus_scene_9 = True
+
 
     menu:
         "return to nexus":
             jump nexus
+
+label nexus_scene_10:
+    "to return to the crash site. CYRRIL is waiting."
+    l"I take it you have the other part?"
+    cw"Always a bit slow, but always faithful ‘till the end."
+    no"So, it’s the Cult you work for?"
+    cw"Strong words from a weak man."
+    no"No wonder you want the Hudokai. You want to beef yourself up, with the cult."
+    cw"Weak intelligence, too."
+    l"I think he’ll surprise you."
+    cw"I think he’s scum. Here, girl. Be my faithful dog and obey me as your master."
+    menu:
+        "I’m her master, now.":
+            l"Pft! I obey no one, anymore."
+            cw"You’ll obey the Cult of Kai when I’m through with you."
+        "She is a bit like a dog, isn’t she?":
+            l"What did you say?"
+            cw"Haha, indeed! Certainly as stupid as one to believe I was not in the Cult of Kai."
+    l"You’re no better than a petty criminal."
+    cw"The only criminals here are the pair of you, along with a messy haired cat."
+    m"My purr is as fearsome as a roar."
+    cw"But I’m more like a dinosaur."
+    m"In that you’re old?"
+    cw"A dinosaur amongst ants. Let me pry that engine part from your squashed bodies and escape victorious from this Nexus Void."
+    "The warden suddenly attacks taking max by suprice and forcing him back"
+    "Nova lets loose a round of ammo as lione begins to advance"
+    l"Why do you want this Hudokai, anyway?"
+    cw"We all, at the cult, have differing reasons. Mine is to simply rule the law, to shape it to my whim and watch the universe controlled by how I want it controlled."
+    "He lets loose a bolt of lightning that Nova and Lione barely dodge in time"
+    no"Sounds stupid."
+    cw"Now, knowing that Hudokai is forged in the void, deep within the Nexus crust and briefly uncovered by the prison ship, I will escape this place and provide the cult with Hudokai delights."
+    "Nova uses stasis hudokai but the warden simply pushes through it with no issues"
+    "A loud noice begins in the bacground"
+    l"That-that’s the sound of the prison ship engines!"
+    cw"This isn’t my doing."
+    gg"No, it’s mine."
+    "The two groups stop fighting as gregs voice comes over the loud speeker and you can see him in the main bridge through the window"
+    gg"So that’s the power of Roke’s training?"
+    no"The way I see it, Roke trained us to take you down and there are two targets in my sight, right now."
+    m"Where is Rokey Pokey, anyway?"
+    "A burnt figure falls from the boarding ramp , Nova rushs to him"
+    gg"First degree burns, electrocution, poisoning... the list goes on"
+    "Roke""(Coughin)Well... I’m still alive, fools! Go get them kid"
+    cw"Weak ol’ Greg had someone who could actually take Roke down for the first time - me."
+    no"And I’d say we gave you a good fight."
+    cw"No. I was merely toying with you."
+    "The warden raises his hand and Lione is zapped and sent flying. Max and Matt attend to her."
+    "Roke""Coughing, spluttering)No... no amount of unconveredHudokai can... keep me down, not even any from the monster beneath this town, hidden within the Nexus. But no... no doubt you’ll incur his wrath soon enough. You... you and your cult are finished before the might of... Rettam Krad."
+    cw"Pah. And since Greg kindly brought another ship part with him, it looks like it’s our time to escape."
+    gg"What about Foltix?"
+    cw"What about Foltix?"
+    no"Like hell will I let you escape!"
+    "Lione douses herself in the nearby water. Greg starts to pull the ship up and Nova launches himself onto Cyrril as Max and Lione struggle to pull themselfs onto the boarding ramp."
+    " Nova and Cyrril have a fist fight that starts on the ship’s landing bay and works its way through the interior. GREG pilots it into the air."
+    "LIONE also gets involved swinging her sword before running through door only to return again a few minuetes later to find cyrril throwing Nova acros the table"
+    l"I’ve attached the throttle and metal plate."
+    cw"So kind of you to do my dirty work, vice-warden."
+    l"From here on out, I do my own dirty work. You idiots could have blown this ship up if I didn’t install our parts quick enough."
+    no"No, he counted on us to do that. There’s no way he’d destroy the last hope of escape from the Nexus."
+    cw"Right you are... now die!"
+    "Max suddenly grapples CYRRIL and pile-drives him out of the ship’s open window. Together, they fall."
+    l"Curse that Max!"
+    no"He helped us escape and we barely even knew him. Plus, he pile-drived that warden out the window. That's awesome."
+    l"The longer we dilly-dally here, the more likely we’ll die with Greg at the helm."
+    "Nova and Lione sneak into the cockpit"
+    "Nova raises his hand and the wave of energy flowed across greg"
+    no"Locked in stasis. He’s no threat."
+    l"Stasis only lasts until the energy source is drained, capeesh?"
+    no"What’s a capeesh?"
+    l"Look, stasis doesn’t last forever, is what I’m saying. Lock him in one of the cells and we can use him to support our claim when we reach the Reality Council. You did good, Nova. I’d even say you’ve done your community service."
+    no"Don’t push it."
+    "PRISON SHIP""GRAVITY-NUL BOOSTERS ACTIVE. LIGHT SPEED REACHED. STASIS HUDOKAISYPHONED TO SHIP INTERIOR. WE ARE NOW FREE TO LEAVE THE VOID."
+    $ nexus_p1_complete = True
 
 
 # This ends the game.
