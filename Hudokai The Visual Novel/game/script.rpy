@@ -124,7 +124,7 @@ label start:
             cw"It matters not! Your fates lie with the Arachnivolt, now."
 
 
-label after_menu:
+
     #remove cyrill.
     hide cyrillwar_right
     "Prisoner 30895 and LIONE RUN from a large robotic spider that gives
@@ -287,7 +287,8 @@ label crash_site:
         no"The wardens back that way we better stay away"
     else:
         no"i can see the town from here"
-    if seen_nexus_scene_9:
+    if nexus_p1_complete == False:
+        $ nexus_p1_complete = True
         jump nexus_scene_10
     menu:
         "return to nexus":
@@ -317,7 +318,8 @@ label item_shop:
         "worker""Maybe try some shops around town"
     else:
         "worker""Welcome"
-    if seen_nexus_scene_1:
+    if seen_nexus_scene_2 == False:
+        $ seen_nexus_scene_2 = True
         jump nexus_scene_2
     else:
         "worker""Welcome"
@@ -334,15 +336,19 @@ label inn:
         no"Maybe...?"
         l"Yes im hurt"
         "worker""We have a doctor who works here part time, come this way"
-        $ journal001 = False
-        jump nexus_scene_1
+
+        if seen_nexus_scene_1 == False:
+            $ seen_nexus_scene_1 = True
+            jump nexus_scene_1
 
     else:
         "worker""Welcome here take a bed and sleep"
 
-    if seen_nexus_scene_4:
+    if seen_nexus_scene_5 == False:
+        $ seen_nexus_scene_5 = True
         jump nexus_scene_5
-    if seen_nexus_scene_6:
+    if seen_nexus_scene_7 == False:
+        $ seen_nexus_scene_7 = True
         jump nexus_scene_7
     menu:
         "return to nexus":
@@ -356,7 +362,8 @@ label roke_house:
         r"GET THE HELL OUTTA HERE BRAT"
     else:
         r"Welcome kid"
-    if seen_nexus_scene_7:
+    if seen_nexus_scene_8 == False:
+        $ seen_nexus_scene_8 = True
         jump nexus_scene_8
     menu:
         "return to nexus":
@@ -370,15 +377,14 @@ label max_house:
         no"This house has been set alight but theres no damage to the surrounding buildings?"
     else:
         no"What a dump!"
-    if seen_nexus_scene_2:
+    if seen_nexus_scene_3 == False:
+        $ seen_nexus_scene_3 = True
         jump nexus_scene_3
     else:
         no"What a dump!"
-        if seen_nexus_scene_5:
-            jump nexus_scene_6
-        else:
-            no"What a dump!"
-
+    if seen_nexus_scene_6 == False:
+        $ seen_nexus_scene_6 = True
+        jump nexus_scene_6
     menu:
         "return to nexus":
             jump nexus
@@ -488,7 +494,6 @@ label nexus_scene_1:
     "Nova turns the corner only to see another Nova walking down the path towrds him."
     "He hides and watches as this strange other version of himself walks by."
     no"I have to find out what’s going on."
-    $ seen_nexus_scene_1 = True
     menu:
         no"Im so confused ,what should i do?"
         "Follow Him":
@@ -504,7 +509,6 @@ label nexus_scene_2:
     "The stranger quickly pats Nova's body down and then runs off."
     no"Worse things have happened today."
     no"Oi!"
-    $ seen_nexus_scene_2 = True
     jump nexus
 
 label nexus_scene_3:
@@ -549,7 +553,6 @@ label nexus_scene_3:
             "Crazy-Man""You’ll be the next one taken!"
             no"What the hell’s wrong with this town?!"
             no"I wonder if there’s any transport to get me out of here? I’ll try up north of the town."
-            $ seen_nexus_scene_3 = True
     menu:
         "return to nexus":
             jump nexus
@@ -566,7 +569,6 @@ label nexus_scene_4:
     "MATT""You feel weak from all that’s happened, today. It’s best you find somewhere to rest, first. Ask me again, tomorrow. Don’t look for me. I’ll find you."
     "MATT disappears, quite literally."
     no"I hate people telling me what to do."
-    $ seen_nexus_scene_4 = True
     menu:
         "return to nexus":
             jump nexus
@@ -615,8 +617,6 @@ label nexus_scene_5:
         "PERSON""And you do that often when people are dying around you?"
         no"..."
         "Nova leaves"
-
-        $ seen_nexus_scene_5 = True
         menu:
             "return to nexus":
                 jump nexus
@@ -723,9 +723,6 @@ label nexus_scene_6:
             no"!"
             "MATT""I met Lione. She told me your prisoner report. She fears you, dude, but doesn’t want to admit it. You’re a wanted criminal. You have to fight if you want to survive."
             no"I’ll... find my own way."
-            $ seen_nexus_scene_6 = True
-
-
     menu:
         "return to nexus":
             jump nexus
@@ -772,8 +769,6 @@ label nexus_scene_7:
     "Roke""It’s Roke. Roke Zephyr. Don’t none o’ you forget that! Matt, you owe me. "
     "MATT leaves the area."
     "Roke""Twerp. All right, kids, follow me to my mansion."
-    $ seen_nexus_scene_7 = True
-
     menu:
         "return to nexus":
             jump nexus
@@ -907,7 +902,6 @@ label nexus_scene_8:
     l"On your head, be it."
     no"Let’s ask around and see where this Greg is situated, then."
     "Roke""Yeah, and I’ll give you this talkie radio so we can keep each other updated on stuff."
-    $seen_nexus_scene_8 = True
     menu:
         "return to nexus":
             jump nexus
@@ -989,9 +983,6 @@ label nexus_scene_9:
     cw"Vice-Warden, I command you to bring the part to me, immediately."
     l"Hell no! I don’t take orders from some... some crooked warden!"
     cw"If you don’t come, then no one escapes on this day. Choose."
-    $ seen_nexus_scene_9 = True
-
-
     menu:
         "return to nexus":
             jump nexus

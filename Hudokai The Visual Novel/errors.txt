@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 915: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    menu:
-    ^
+File "game/script.rpy", line 340: end of line expected.
+    jump nexus_scene_ 1 
+                      ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun May  8 13:37:41 2022
+Mon May  9 00:12:55 2022
