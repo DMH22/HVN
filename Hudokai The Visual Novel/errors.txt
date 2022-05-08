@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 369: end of line expected.
-    else: "What a dump!"
-          ^
+File "game/script.rpy", line 915: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    menu:
+    ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sun May  8 08:55:50 2022
+Sun May  8 13:37:41 2022

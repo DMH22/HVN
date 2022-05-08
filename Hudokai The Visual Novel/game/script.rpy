@@ -48,7 +48,8 @@ default seen_nexus_scene_4 = False
 default seen_nexus_scene_5 = False
 default seen_nexus_scene_6 = False
 default seen_nexus_scene_7 = False
-default see_nexus_scene_8 = False
+default seen_nexus_scene_8 = False
+default seen_nexus_scene_9 = False
 
 # The game starts here.
 
@@ -400,7 +401,74 @@ label town_watch_tower:
     if journal001:
         no"Because large dark towers dont scream OMINOUS!"
     else:
-        no"Nope"
+        while True:
+            scene yellow
+            "You are in the town watch tower. Go where?"
+            menu:
+                "Floor 1":
+                    call floor_1
+                "Floor 2":
+                    call floor_2
+                "Floor 3":
+                    call floor_3
+                "Floor 4":
+                    call floor_4
+                "Top Floor":
+                    call top_floor
+label floor_1:
+    "There are 2 sets of stairs that lead up to the next floor"
+    menu:
+        "Return to Entrance":
+            jump town_watch_tower
+        "Advance to the next floor":
+            jump floor_2
+label floor_2:
+    "As you advance through the floor you come across monsters in the shape of locked doors"
+    "After searching the cell's you find that one of the prisoners was plnning to escape and had snatched they keys from a guard"
+    "The keys open the elivator door to the next floor"
+    "what do you do?"
+    menu:
+        "Return to Entrance using the elivator":
+            jump town_watch_tower
+        "Retreat to the last floor":
+            jump floor_2
+        "Advance to the next floor":
+            jump floor_3
+label floor_3:
+    "The elivator doors open up into the town watch cafe"
+    "In front of Nova, Max and Lione sit the Town Watch Patrol guards"
+    "All heads turn to you"
+    menu:
+        "Combust Hudokai":
+            "Nova's pistol explodes into action catching the guards off guard as the 3 of them made a mad dash for the stairs"
+        "Stasis Hudokai":
+            "Nova's arm lifts up to face the guards and a wave of invisible energy flows across the room like a wave , all the guards slow down and the group heads for the stairs while they can"
+        "All for one?":
+            m"Why no i might as well check out this weapon roke gave me"
+            l"Itll bee a good test of strength after our training"
+            no"I guess Foltix was a higher grade of fighter come on guys"
+            no"LETS DO THIS!"
+    "The group make to the stairs"
+    menu:
+        "Return to Entrance using the elivator":
+            jump town_watch_tower
+        "Retreat to the last floor":
+            jump floor_3
+        "Advance to the next floor":
+            jump floor_4
+label floor_4:
+    "The group enter through a door into a room with a movng floor"
+    "after being split up multile times lione stands on the right tile and arrives at the stairs to the final room"
+    "she tells Nova and Max who join her"
+    menu:
+        "Return to Entrance using the elivator":
+            jump town_watch_tower
+        "Advance to the next floor":
+            jump top_floor
+
+label top_floor:
+    "Nova and the group enter through a door into a walkway that looks down"
+    jump nexus_scene_9
     menu:
         "return to nexus":
             jump nexus
@@ -840,7 +908,22 @@ label nexus_scene_8:
         "return to nexus":
             jump nexus
 
+label nexus_scene_9:
+    "MATT is in the centre of the room below, clamped into a device. A jolt of electricity illuminates the room and electrocutes Matt. Greg can be heard, but not seen. He is firing the energy out of view."
+    gg"Now, I’ll ask you one last time, Matthew, what happened to poor Foltix?"
+    m"(In a hushed tone)It’s Matt!"
+    l"Thank you, captain obvious."
+    "Matt""..."
+    gg"You know, being the oldest being on this sad state of a rock has kept you well for perhaps too long. I respected you, Matthew. Everyone did."
+    "Matt""Nothing’s changed!"
+    gg"Until today. You put a stupid little “Matt plan” into action. You knew I’d notice you assembling that silly squad of kids. Why bother?"
+    "Matt""I thought you had all the answers, dawg."
+    "Another electrical charge ravages MATT."
+    
 
+    menu:
+        "return to nexus":
+            jump nexus
 
 
 # This ends the game.
