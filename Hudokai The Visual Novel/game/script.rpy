@@ -46,12 +46,15 @@ default seen_nexus_scene_2 = False
 default seen_nexus_scene_3 = False
 default seen_nexus_scene_4 = False
 default seen_nexus_scene_5 = False
+default seen_nexus_scene_6 = False
+default seen_nexus_scene_7 = False
+default see_nexus_scene_8 = False
 
 # The game starts here.
 
 label start:
 
-    scene bg nexus 1
+    scene
 
     "A crash site. Dead bodies scatter a rocky landscape. Pieces
     of futuristic metal embed the area. A silver haired young
@@ -335,6 +338,8 @@ label inn:
 
     if seen_nexus_scene_4:
         jump nexus_scene_5
+    if seen_nexus_scene_6:
+        jump nexus_scene_7
     menu:
         "return to nexus":
             jump nexus
@@ -347,6 +352,8 @@ label roke_house:
         r"GET THE HELL OUTTA HERE BRAT"
     else:
         r"Welcome kid"
+    if seen_nexus_scene_7:
+        jump nexus_scene_8
     menu:
         "return to nexus":
             jump nexus
@@ -361,8 +368,13 @@ label max_house:
         no"What a dump!"
     if seen_nexus_scene_2:
         jump nexus_scene_3
-    if seen_nexus_scene_5:
-        jump nexus_scene_6
+    else:
+        no"What a dump!"
+        if seen_nexus_scene_5:
+            jump nexus_scene_6
+        else:
+            no"What a dump!"
+
     menu:
         "return to nexus":
             jump nexus
@@ -537,7 +549,6 @@ label nexus_scene_5:
             "return to nexus":
                 jump nexus
 
-
 label nexus_scene_6:
     "Night falls across the nexus"
     "Nova explores the Nexus in his search for MAX."
@@ -625,13 +636,212 @@ label nexus_scene_6:
             "MATT""That’s the curative Hudokai."
             m"What the fluff is Hudokai, anyway?"
             "MATT""Today I won’t be answering your questions, but handing you over to a more experienced fighter of the Nexus."
-
-
+            no"I can fight just fine, it seems."
+            "MATT""You’re as flimsy as a hotdog."
+            m"Do you like hotdogs or something?"
+            "MATT""How did you guess?"
+            m"Intuition."
+            "MATT""We call him Roke Zephyr. He’s a veteran fighter from a country cooked by war in a far off dimension. Say that all in one breath."
+            no"Who are you, really?"
+            "MATT""I like to see myself as a guardian of the Nexus. I was the very first to be transported here. My task, for now, is to bring you to Roke."
+            no"I’m not following you."
+            "MATT""You don’t have to, dude. But you do have to see Roke, today. If you’d prefer to make your own way there, then I’ll see you there."
+            no"I want answers! I don’t want to fight, anymore."
+            "MATT""You fought the highest power and killed millions."
+            no"!"
+            "MATT""I met Lione. She told me your prisoner report. She fears you, dude, but doesn’t want to admit it. You’re a wanted criminal. You have to fight if you want to survive."
+            no"I’ll... find my own way."
+            $ seen_nexus_scene_6 = True
 
 
     menu:
         "return to nexus":
             jump nexus
+
+label nexus_scene_7:
+    "Nova travels across the Nexus."
+    "Everywhere is blocked off beyond the main path leading to the inn."
+    "Nova eventually finds a middle aged man with one arm and a red scarf - ROKE."
+    "MATT is with him, as is Max and LIONE."
+    "Roke""Better late than never."
+    no"I was blatantly guided here."
+    "MATT""I knew you’d see sense!"
+    l"Ah. Nova. Nice of you to show your face after leaving me."
+    no"Huh. I thought you left me."
+    l"I was injured!"
+    m"So, why the fluff am I here?"
+    "Roke""Good point. Matt, why are these squirts in my sight?"
+    "MATT""They are targets of the Cult of Kai. They have Hudokai."
+    "Roke""I have one piece of advice for you weaklings: Get out, now."
+    l"Like I’m going to listen to that when you judged us on appearance."
+    no"So says the vice-warden."
+    "Roke""You don’t have what it takes, simple as. Battle isn’t beautiful, nor is it glorious. It isn’t child’s play and the playground is a bloodbath. It’s death."
+    no"So maybe I died and was reborn?"
+    "Roke""An epiphany? You blow chunks. Hudokai ain’t a laughing matter."
+    m"So what exactly is Hudokai?"
+    l"An energy source in the form of condensed matter. They’re rare, but we of the prison ship had a stasis Hudokai implanted to keep prisoners locked in place, frozen in time."
+    "Roke""Bitch don’t know nothing. Hudokai is hell. Condensed Dark Matter from the void - a place between dimensions."
+    "Matt""You might know that place as the Nexus."
+    no"So we’re locked between all dimensions, in the void."
+    "Roke""And in here lies a bounty of different Hudokai, which those idiots, like Foltix, of the cult want."
+    m"The cult? You mean the Town Watch."
+    "Roke""I mean what I said, dumbass! They only call themselves the “Town Watch” as a guise. Bastards. They really want the Hudokai, but like us, Greg’s groupies are trapped in here."
+    l"So you’re going to teach us how to use the Hudokai against this “Cult of Kai”?"
+    "Roke""No, ‘cause you suckas don’t got it. And even if I did, it won’t solve anything. No one can escape the Nexus void without a ship. The sky’s the only escape, but since no one has a ship, it ain’t a worry."
+    no"I came here by ship."
+    "Roke""You what?"
+    l"Our prison ship crashed here."
+    "Roke""..."
+    "Matt""Best get cracking, Roke. If the cult escape the void and out into the infinite dimensions with the Hudokai, they will start to abuse it."
+    no"This “cult”. I take it there are others on the outside?"
+    "Matt""No one knows what’s beyond the void. The strong are taken out by the Town Watch and many have lived here too long to remember their past before entering the Nexus."
+    "Roke""All right, fine. Since no one don’t know how to use Hudokai in battle but me, and since I don’t wanna see the universes ravaged like my home... I’ll teach you freaks how to use the latent power of Hudokai."
+    "Matt""Oh, Rokey, I knew you’d see sense"
+    "Roke""It’s Roke. Roke Zephyr. Don’t none o’ you forget that! Matt, you owe me. "
+    "MATT leaves the area."
+    "Roke""Twerp. All right, kids, follow me to my mansion."
+    $ seen_nexus_scene_7 = True
+
+    menu:
+        "return to nexus":
+            jump nexus
+
+label nexus_scene_8:
+    "Once they reach the mansion, ROKE charges Nova and begis to attack"
+    "Roke""Defend yourself if you want to live!"
+    menu:
+        "I don’t even have a weapon!":
+            "Roke""Who says you need a weapon to fight?"
+            no"But you have one."
+            "Roke""Fighting ain’t ever fair, kid. It’s all about your defence... if you want to live."
+        "If we attack as a team, we might survive!":
+            l"I don’t much like the idea of working with a criminal again."
+            "Roke""But maybe Nova has a point?"
+            no"There’ll be more targets for him to aim at. You can be my meat sheild, Lione."
+            l"How dare you! I’ll show you who will be the dead weight if we team up. Hmph!"
+            m"We should defend, at any rate. Otherwise we might not make it - he’s serious."
+            no"All right, weapon or not, here we come!"
+        "I thought this was “training”!":
+            l"Quit whining. There is no training in the real world."
+            "Roke""Saggy face is right."
+            l"What did you call me?"
+            "Roke""And she’s the only one with a bit of combat training... but nothing will prepare you for me. Best learn how to defend before I squash you!"
+    n"His attacks do some serious damage. I’d best use the defend option to take less damage and survive his onslaught."
+    "Roke""Defending also heals your health, or ‘HP’, by a small percentage. Your Hudokai is also a powerful weapon, so powerful that it will drain its own energy after every use. I call this ‘MP’. It can be restored when given an ionic charge or after resting for the night."
+    n"I think you’d better concentrate on the battle."
+    "Roke""Infernal kid ain’t gonna tell me how to fight!"
+    "The fight ends with a draw both Novas Group and Roke are catching there breath when Foltix arrives"
+    f"Ahh, Roke. I should’ve known it was you. I followed the flashes of Hudokai in the sky."
+    "Roke""Oh, goody. It’s the Town Watch."
+    l"I thought the strong were removed from the Nexus?"
+    f"If it were up to me, I’d leave them around. They’d be helpful, but Greg doesn’t want that and I respect his decision. Besides, Roke is actually too strong for me to handle. As far as Greg’s concerned, Roke doesn’t exist."
+    no"Sounds like you do all of his handywork."
+    f"Greg’s a good friend. My best friend, in fact. He does other things for our group."
+    m"You don’t seem like such a bad guy..."
+    f"I like to think I’m not, but... well, I am. I can’t deny the things I’ve done, or am going to do. I can’t allow you guys to know what you know."
+    "Roke""He won’t let ya go with your trained strength, either. Not now."
+    f"Oh? So it was this lot using the Hudokai to light up the sky. I see. Then I definitely have to take you guys down. Sorry about that."
+    m"I... won’t let you!"
+    f"Look, I’ll leave you be if you just stand aside, Max."
+    l"What’s so special about him?"
+    m"He’s my dad! I know it!"
+    "Roke""Family means nothing on the battlefield. Trust me."
+    m"And I’ve been saving these two daggers just for your return, dad... how dare you turn your back on us all! I didn’t think you could be in here with me... but I won’t forgive you!"
+    f"Is that what you think?"
+    "Roke""Hey, kid. Best back him up. After all, I reckon you’ll be pleasantly surprised after what I taught you... here"
+    "Roke toss's Nova a pistol"
+    "Nova turns to see both Max and Lione egin to rush foltix , Nova lets loose a couple shots that hurmlessly bounce of foltix's armour"
+    "As Max approuches Foltix moves away and into lione's swords range"
+    "Nova notices a circullar slot in the handle of the pistol and slots the Combust Hudokai in"
+    "Nova feels the heat through the pistols handle and lets loose a round of bullets that errupt from the pistol as fireballs slamming into foltix"
+    f"Such... strength! But how?"
+    no"We were much stronger in that fight. In such a short amount of time, too..."
+    f"I... must tell Greg!"
+    m"Don’t you dare, dad. This is between you and me."
+    f"Time out, time out! I’m not your father, but I do know how you feel."
+    m"You’re... not my dad? No. It’s me - Max Judge! I’m your son. R-right?"
+    "FOLTIX removes his helmet. He has the same head as Max."
+    no"Another Max?"
+    f"I’m you from a different dimension. That’s why I didn’t want to fight you."
+    m"W-what? Another me? I almost... killed myself!"
+    f"Stop being so melodramatic. Damn. That assault really stung."
+    "Roke""I think it’s about time you were done away with, don’t you, Foltix?"
+    f"Ugh... You still on... about what I did to your friend?"
+    "Roke""You didn’t have to fight that battle, but you did. I ain’t never gonna forgive you."
+    no"People change."
+    "Roke""Tell that to my dead partner."
+    f"I’m certainly not... the man I was..."
+    menu:
+        "(Let Foltix go)":
+            no"I’m not going to chase you."
+            "Roke""What?!"
+            f"..."
+            l"From what I understand, Foltix’s hands are stained in the blood of Roke’s entire homeland. Never let a criminal escape."
+            no"I don’t think Foltix is as bad as you’re all making him out to be. I think he’s a changed man."
+            f"I only want... to do what is right. It isn’t... always the easiest decision, though..."
+            l"Screw you! A criminal is a criminal! I’ll arrest you and prove to the Warden I can be trusted!"
+            f"...The Warden?"
+            l"As vice-warden, it is my duty!"
+            f"...Poor girl. It isn’t always fun following orders..."
+            no"Let him go. All we need to do is concentrate on repairing that prison ship to get out of here."
+        "(Kill Foltix)":
+            no"But you still follow orders to kill, otherwise you wouldn’t have attacked us. Maybe you haven’t changed that much, after all."
+            f"I beg you... Just let me go... I will leave you be like I leave Roke!"
+            "Roke""Too much blood has been spilt. Now that there’s this little team and a ship to shape up and get outta here on, I think it’s time to do you in."
+            f"No, wait!"
+            no"Goodbye, Foltix. Let me kill you in the name of justice."
+            "Nova kills FOLTIX with his weapon. Silence."
+            l"Justice can be brutal."
+            "Roke""He killed my partner in battle. He devastated thousands of homelands. He deserved it."
+    m"It felt like a part of me died inside after that... I wonder what Greg will do next?"
+    "Roke""Now don’t get me wrong, ‘cause I trained you to take on the Cult of Kai members, but Greg’s not your concern at the minute."
+    menu:
+        "You can’t tell me what to do.":
+            "Roke""I damn well can. Your concern is fixing up that prison ship and getting out of here. You can leave Greg behind!"
+        "You’re right.":
+            l"Agreeing with someone? You?"
+            no"It’s the prison ship. If we can fix that up, we can get out of here and leave Greg trapped here, still. He won’t ever be a problem."
+    l"I don’t know if your tiny brain even noticed, but the prison ship was left in no condition to fly."
+    no"We’ll make it work."
+    "Roke""And I’m guessing you know how it works, little lady?"
+    "Roke""Tell me and I’ll make sure you get off this forsaken rock ‘cause I’m coming with you."
+    m"But you have a mansion here and none of you know what’s outside. Why do you want to leave?"
+    l"I know what’s out there. There may be very little Hudokai, but it’s a lot more interesting than this place."
+    "Roke""People come to the Nexus after a piece of rare Hudokai is ripped open from an explosion, or mass amount of energy. Loads of us have slipped here and haven’t been able to get out. Now you take it from me, when a ship finally appears to get someone out, they’ll want to get out!"
+    l"I haven’t got a choice. I have to co-operate with a criminal, a brute and someone who has daddy issues."
+    m"Actually, I don’t want to leave."
+    "Roke""You’re insane, kid."
+    m"This place has become my home. I don’t know why anyone would want to leave their home."
+    "Roke""Whatever. My partner thought like you did and he was a Death Bringer - one o’ those people who are trained to watch over others and sentence them to their deaths when their time has come. He was a Death Bringer and he still died, protecting our home."
+    m"Then maybe I’ll wander out there at some point and find my home planet? I’ll protect my home from the cult. Right now, my home is here."
+    "Roke""Bloody kid... You remind me way too much of him... Now, don’t you go thinking I’ve gone all soft, but... I’d like you to have this."
+    m"What’s this? A scythe? You Death or something?"
+    "Roke""That’s what the Death Bringers wield. Only those trained in their death arts can slice the soul out of a living being, but... I reckon you can have it. It’s a weapon. It will help you protect your home."
+    m"This was your partner’s, wasn’t it? You gay?"
+    "Roke""Shut up and use it, before I change my mind! Lione, where the hell to next?"
+    l"The first thing we’re going to do is rendezvous with the Reality Council, once we’re out of here."
+    no"The what?"
+    l"They are an alliance of world leaders. They council the innermost solar system of the galaxy, in three dimensions. Their word is law. We should tell them about the cult."
+    no"Wait, what about your precious Warden? He’s your superior."
+    l"He’ll still be in the Nexus. I want to prove myself to him before I next see him. If we capture a member of the cult as proof that they exist, as well as clear my name... that should do it."
+    no"Yeah, he blamed you for the takedown of the prison ship."
+    "Roke""Sounds like a load of manure to me. I just wanna get this ship running."
+    l"The engines are critically damaged, numbskull. We don’t even know what parts we’ll need for it to get running again, let alone the metal plating for the exterior."
+    "Roke""Then I’ll go and examine the piece o’ junk whilst you do your thing, twerp. It ain’t rocket science."
+    l"Actually, it kind of is."
+    "Roke""Whatever. My old man used to be a mechanic and I used to watch him when he worked. I know what I’m looking for. Here, take this old radio. I used it in the war. Good for keeping contact across wide distances. I’ll let you know what we’re looking for whilst you do your waste of time thing."
+    l"It’s not a waste of time if it helps the believability of our claim."
+    no"If I help you get this Greg guy, will you tell me more about, you know, me and my life before the crash? I’m sick of being in the dark."
+    l"On your head, be it."
+    no"Let’s ask around and see where this Greg is situated, then."
+    "Roke""Yeah, and I’ll give you this talkie radio so we can keep each other updated on stuff."
+    $seen_nexus_scene_8 = True
+    menu:
+        "return to nexus":
+            jump nexus
+
+
+
 
 # This ends the game.
 return
