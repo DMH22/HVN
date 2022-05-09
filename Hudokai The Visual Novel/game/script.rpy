@@ -40,7 +40,6 @@ define ss = Character("Sloppy Scock")
 #Nexus - Nexus Cliffside - Crash site - Achevment House - Cafe-Doctors - Item Shop - Inn - Church - Roke's House - Max's House - Train Station - Town Watch Tower
 
 #Journal Variables
-default journal001 = False
 default seen_nexus_scene_1 = False
 default seen_nexus_scene_2 = False
 default seen_nexus_scene_3 = False
@@ -236,7 +235,7 @@ label start:
             l"That... was the... *cough* Hudokai? *hack* No... gotta go."
 
     no"Looks like there’s a town ahead..."
-    $ journal001 = True
+
     #show nexus title screen with a fade.
 
 
@@ -271,10 +270,7 @@ label nexus:
 label nexus_Cliffside:
     scene red
     "You are at Nexus Cliffside."
-    if journal001:
-        no"The wardens back that way we better stay away"
-    else:
-        no"i can see the town from here"
+    no"The wardens guards are back that way we better stay away"
     menu:
         "return to nexus":
             jump nexus
@@ -283,10 +279,7 @@ label nexus_Cliffside:
 label crash_site:
     scene red
     "You are at the crash site."
-    if journal001:
-        no"The wardens back that way we better stay away"
-    else:
-        no"i can see the town from here"
+    no"The wardens back that way we better stay away"
     if nexus_p1_complete == False:
         $ nexus_p1_complete = True
         jump nexus_scene_10
@@ -298,12 +291,9 @@ label crash_site:
 label achevment_house:
     scene red
     "You are at the Achevment House."
-    if journal001:
-        "worker""Sorry we arent open until the next cycle, come back later"
-        no"Any suggestions?"
-        "worker""Maybe try some shops around town"
-    else:
-        "worker""Welcome"
+    "worker""Sorry we arent open until the next cycle, come back later"
+    no"Any suggestions?"
+    "worker""Maybe try some shops around town"
     menu:
         "return to nexus":
             jump nexus
@@ -312,12 +302,9 @@ label achevment_house:
 label item_shop:
     scene red
     "You are at the Item Shop."
-    if journal001:
-        "worker""Sorry we arent open until the next cycle, come back later"
-        no"Any suggestions?"
-        "worker""Maybe try some shops around town"
-    else:
-        "worker""Welcome"
+    "worker""Sorry we arent open until the next cycle, come back later"
+    no"Any suggestions?"
+    "worker""Maybe try some shops around town"
     if seen_nexus_scene_2 == False:
         $ seen_nexus_scene_2 = True
         jump nexus_scene_2
@@ -331,25 +318,23 @@ label item_shop:
 label inn:
     scene red
     "You are at the Inn."
-    if journal001:
-        "worker""Sorry we arent open until the next cycle, one second is that women hurt?"
-        no"Maybe...?"
-        l"Yes im hurt"
-        "worker""We have a doctor who works here part time, come this way"
-
-        if seen_nexus_scene_1 == False:
+    "worker""Sorry we arent open until the next cycle, one second is that women hurt?"
+    no"Maybe...?"
+    l"Yes im hurt"
+    "worker""We have a doctor who works here part time, come this way"
+    if seen_nexus_scene_1 == False:
             $ seen_nexus_scene_1 = True
             jump nexus_scene_1
-
-    else:
-        "worker""Welcome here take a bed and sleep"
 
     if seen_nexus_scene_5 == False:
         $ seen_nexus_scene_5 = True
         jump nexus_scene_5
+
     if seen_nexus_scene_7 == False:
         $ seen_nexus_scene_7 = True
         jump nexus_scene_7
+    else:
+        "worker""Welcome here take a bed and sleep"
     menu:
         "return to nexus":
             jump nexus
@@ -358,10 +343,7 @@ label inn:
 label roke_house:
     scene red
     "You are at the Roke's House."
-    if journal001:
-        r"GET THE HELL OUTTA HERE BRAT"
-    else:
-        r"Welcome kid"
+    "Roke""GET THE HELL OUTTA HERE YA BRAT"
     if seen_nexus_scene_8 == False:
         $ seen_nexus_scene_8 = True
         jump nexus_scene_8
@@ -373,10 +355,6 @@ label roke_house:
 label max_house:
     scene red
     "You are at Max's House."
-    if journal001:
-        no"This house has been set alight but theres no damage to the surrounding buildings?"
-    else:
-        no"What a dump!"
     if seen_nexus_scene_3 == False:
         $ seen_nexus_scene_3 = True
         jump nexus_scene_3
@@ -393,10 +371,7 @@ label max_house:
 label train_station:
     scene red
     "You are at the Train Station."
-    if journal001:
-        no"It looks like theres no train here right now"
-    else:
-        no"The trains here"
+    no"It looks like theres no train here right now"
     if seen_nexus_scene_3:
         jump nexus_scene_4
     menu:
@@ -407,9 +382,8 @@ label train_station:
 label town_watch_tower:
     scene red
     "You are at the Town Watch Tower."
-    if journal001:
+    if seen_nexus_scene_9 = False:
         no"Because large dark towers dont scream OMINOUS!"
-    else:
         while True:
             scene yellow
             "You are in the town watch tower. Go where?"

@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 340: end of line expected.
-    jump nexus_scene_ 1 
-                      ^
+File "game/script.rpy", line 388: reached end of line when expecting ':'.
+    if seen_nexus_scene_9 = False
+                                 ^
+
+File "game/script.rpy", line 390: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Mon May  9 00:12:55 2022
+Mon May  9 13:45:44 2022

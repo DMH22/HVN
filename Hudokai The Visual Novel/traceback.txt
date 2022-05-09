@@ -1,76 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 267, in script call
-    call train_station
-  File "game/script.rpy", line 267, in script call
-    call train_station
-  File "game/script.rpy", line 261, in script call
-    call inn
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 261, in script call
-    call inn
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 261, in script call
-    call inn
-  File "game/script.rpy", line 263, in script call
-    call roke_house
-  File "game/script.rpy", line 269, in script call
-    call town_watch_tower
-  File "game/script.rpy", line 255, in script call
-    call crash_site
-  File "game/script.rpy", line 290, in script
-    if seen_nexus_scene_10 == False:
-  File "game/script.rpy", line 290, in <module>
-    if seen_nexus_scene_10 == False:
-NameError: name 'seen_nexus_scene_10' is not defined
+  File "game/script.rpy", line 256, in script call
+    call achevment_house
+  File "game/script.rpy", line 294, in script
+    if journal001:
+  File "game/script.rpy", line 294, in <module>
+    if journal001:
+NameError: name 'journal001' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 267, in script call
-    call train_station
-  File "game/script.rpy", line 267, in script call
-    call train_station
-  File "game/script.rpy", line 261, in script call
-    call inn
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 261, in script call
-    call inn
-  File "game/script.rpy", line 265, in script call
-    call max_house
-  File "game/script.rpy", line 261, in script call
-    call inn
-  File "game/script.rpy", line 263, in script call
-    call roke_house
-  File "game/script.rpy", line 269, in script call
-    call town_watch_tower
-  File "game/script.rpy", line 255, in script call
-    call crash_site
-  File "game/script.rpy", line 290, in script
-    if seen_nexus_scene_10 == False:
+  File "game/script.rpy", line 256, in script call
+    call achevment_house
+  File "game/script.rpy", line 294, in script
+    if journal001:
   File "renpy/ast.py", line 1898, in execute
     if renpy.python.py_eval(condition):
   File "renpy/python.py", line 2276, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "renpy/python.py", line 2269, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 290, in <module>
-    if seen_nexus_scene_10 == False:
-NameError: name 'seen_nexus_scene_10' is not defined
+  File "game/script.rpy", line 294, in <module>
+    if journal001:
+NameError: name 'journal001' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Hudokai The Visual Novel 1.0
-Mon May  9 00:32:24 2022
+Mon May  9 13:48:01 2022
