@@ -130,7 +130,7 @@ label start:
     chase."
     "Several reinforcement officers get in the way"
     "You can hear a strange sound coming from inside the ship as the large robotic spider tank begins to move forward"
-    #show gp_battler
+    show gp_battler
     "You turn ,lifting you hand up to push through the officers"
     "suddenly a ball of fire apperes in your hand"
     menu:
@@ -280,7 +280,7 @@ label crash_site:
     scene red
     "You are at the crash site."
     no"The wardens back that way we better stay away"
-    if nexus_p1_complete == False:
+    if ((nexus_p1_complete == False) and (seen_nexus_scene_9 == True)):
         $ nexus_p1_complete = True
         jump nexus_scene_10
     menu:
@@ -305,7 +305,7 @@ label item_shop:
     "worker""Sorry we arent open until the next cycle, come back later"
     no"Any suggestions?"
     "worker""Maybe try some shops around town"
-    if seen_nexus_scene_2 == False:
+    if ((seen_nexus_scene_2 == False) and (seen_nexus_scene_1 == True)):
         $ seen_nexus_scene_2 = True
         jump nexus_scene_2
     else:
@@ -326,11 +326,11 @@ label inn:
             $ seen_nexus_scene_1 = True
             jump nexus_scene_1
 
-    if seen_nexus_scene_5 == False:
+    if ((seen_nexus_scene_5 == False) and (seen_nexus_scene_4 == True)):
         $ seen_nexus_scene_5 = True
         jump nexus_scene_5
 
-    if seen_nexus_scene_7 == False:
+    if ((seen_nexus_scene_7 == False) and (seen_nexus_scene_6 == True)):
         $ seen_nexus_scene_7 = True
         jump nexus_scene_7
     else:
@@ -344,7 +344,7 @@ label roke_house:
     scene red
     "You are at the Roke's House."
     "Roke""GET THE HELL OUTTA HERE YA BRAT"
-    if seen_nexus_scene_8 == False:
+    if ((seen_nexus_scene_8 == False) and (seen_nexus_scene_7 == True)):
         $ seen_nexus_scene_8 = True
         jump nexus_scene_8
     menu:
@@ -355,12 +355,12 @@ label roke_house:
 label max_house:
     scene red
     "You are at Max's House."
-    if seen_nexus_scene_3 == False:
+    if ((seen_nexus_scene_3 == False) and (seen_nexus_scene_2 == True)):
         $ seen_nexus_scene_3 = True
         jump nexus_scene_3
     else:
         no"What a dump!"
-    if seen_nexus_scene_6 == False:
+    if ((seen_nexus_scene_6 == False) and (seen_nexus_scene_5 == True)):
         $ seen_nexus_scene_6 = True
         jump nexus_scene_6
     menu:
@@ -372,7 +372,8 @@ label train_station:
     scene red
     "You are at the Train Station."
     no"It looks like theres no train here right now"
-    if seen_nexus_scene_3:
+    if ((seen_nexus_scene_4 == False) and (seen_nexus_scene_3 == True)):
+        $ seen_nexus_scene_4 = True
         jump nexus_scene_4
     menu:
         "return to nexus":
@@ -382,7 +383,7 @@ label train_station:
 label town_watch_tower:
     scene red
     "You are at the Town Watch Tower."
-    if seen_nexus_scene_9 = False:
+    if ((seen_nexus_scene_9 == False) and (seen_nexus_scene_8 == True)):
         no"Because large dark towers dont scream OMINOUS!"
         while True:
             scene yellow
@@ -452,6 +453,7 @@ label floor_4:
 
 label top_floor:
     "Nova and the group enter through a door into a walkway that looks down"
+    $ seen_nexus_scene_9 = True
     jump nexus_scene_9
     menu:
         "return to nexus":
