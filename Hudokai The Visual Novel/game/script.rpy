@@ -399,6 +399,12 @@ label town_watch_tower:
                     call floor_4
                 "Top Floor":
                     call top_floor
+    else:
+        menu:
+            "return to nexus":
+                jump nexus
+        return
+
 label floor_1:
     "There are 2 sets of stairs that lead up to the next floor"
     menu:
