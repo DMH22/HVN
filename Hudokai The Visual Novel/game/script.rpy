@@ -130,7 +130,7 @@ label start:
     chase."
     "Several reinforcement officers get in the way"
     "You can hear a strange sound coming from inside the ship as the large robotic spider tank begins to move forward"
-    show gp_battler
+    show gp_battler at right
     "You turn ,lifting you hand up to push through the officers"
     "suddenly a ball of fire apperes in your hand"
     menu:
@@ -141,7 +141,7 @@ label start:
             "Before the officers have a chance to advance you throw the ball of fire and it explodes just in front of them and creates a path for the two of you to escape through"
         #
 
-    #hide gp_battler
+    hide gp_battler
     l"I don’t need you fighting my battles... especially not with that whacked out ability you have."
     nn"..."
     l"Tsk... my life in the hands of a mute, typical. Here’s a hint: Only rubber can absorb the electrical energy of our Arachnivolt tank bot. If its energy is taken, it will stop, otherwise it will perpetually repair itself."
@@ -152,7 +152,7 @@ label start:
 
     "As you both clean your hands and drink the fresh cold water you hear a crashing from the direction you came"
     "Coming towards you is a machine spider tank"
-    #show arachnivolt
+    show arachnivolt at right
 
     l"Oh crud"
 
@@ -173,9 +173,10 @@ label start:
     "Its blast explodes the cliff face behind you and your flung high into the air above it"
     "you feel the the sphere in you pocket heating up and feel the fireball gathering in your hands"
     "you fire one off allowing you to gain your balance and aim"
-    #show concept art 1
+    show conceptart1
     "and unleash the other fireball directy into the airvents on the top as lione unleashes a flurry of sword attacks taking its legs off"
-    # hide arachnivolt
+    hide conceptart1
+    hide arachnivolt
 
     l"You can thank me for my quick thinking, later... But don’t get me wrong,
     criminal, I am grateful for your help... but you’ve got me into some deep dung."
@@ -400,6 +401,7 @@ label town_watch_tower:
                 "Top Floor":
                     call top_floor
     else:
+        "The door is locked."
         menu:
             "return to nexus":
                 jump nexus
