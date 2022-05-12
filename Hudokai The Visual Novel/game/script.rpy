@@ -2,6 +2,11 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+# Images
+
+
+
+
 
 # Main Cast List
 
@@ -60,6 +65,7 @@ label start:
     "A crash site. Dead bodies scatter a rocky landscape. Pieces
     of futuristic metal embed the area. A silver haired young
     adult moans, gets up slowly, then falls back down."
+
 
 
     show novanum_left at left
@@ -173,10 +179,13 @@ label start:
     "Its blast explodes the cliff face behind you and your flung high into the air above it"
     "you feel the the sphere in you pocket heating up and feel the fireball gathering in your hands"
     "you fire one off allowing you to gain your balance and aim"
-    show conceptart1
+    show concept_art_1
     "and unleash the other fireball directy into the airvents on the top as lione unleashes a flurry of sword attacks taking its legs off"
-    hide conceptart1
+    hide concept_art_1
     hide arachnivolt
+    scene
+    show novanum_left at left
+    show lione_right at right
 
     l"You can thank me for my quick thinking, later... But don’t get me wrong,
     criminal, I am grateful for your help... but you’ve got me into some deep dung."
@@ -237,7 +246,8 @@ label start:
 
     no"Looks like there’s a town ahead..."
 
-    #show nexus title screen with a fade.
+    show nexus_title
+    no"lets head in to town"
 
 
 #Nexus Area List
@@ -246,7 +256,7 @@ label start:
 label nexus:
     # scene bg_town
     while True:
-        scene yellow
+        scene nexus_location_map
         "You are in the Nexus. Go where?"
         menu:
             "Nexus Cliffside":
@@ -271,6 +281,7 @@ label nexus:
 label nexus_Cliffside:
     scene red
     "You are at Nexus Cliffside."
+    show novanum_left at left
     no"The wardens guards are back that way we better stay away"
     menu:
         "return to nexus":
@@ -280,6 +291,7 @@ label nexus_Cliffside:
 label crash_site:
     scene red
     "You are at the crash site."
+    show novanum_left at left
     no"The wardens back that way we better stay away"
     if ((nexus_p1_complete == False) and (seen_nexus_scene_9 == True)):
         $ nexus_p1_complete = True
@@ -292,6 +304,7 @@ label crash_site:
 label achevment_house:
     scene red
     "You are at the Achevment House."
+    show novanum_left at left
     "worker""Sorry we arent open until the next cycle, come back later"
     no"Any suggestions?"
     "worker""Maybe try some shops around town"
@@ -303,6 +316,7 @@ label achevment_house:
 label item_shop:
     scene red
     "You are at the Item Shop."
+    show novanum_left at left
     "worker""Sorry we arent open until the next cycle, come back later"
     no"Any suggestions?"
     "worker""Maybe try some shops around town"
@@ -319,10 +333,13 @@ label item_shop:
 label inn:
     scene red
     "You are at the Inn."
+    show novanum_left at left
     "worker""Sorry we arent open until the next cycle, one second is that women hurt?"
     no"Maybe...?"
+    show lione_right at right
     l"Yes im hurt"
     "worker""We have a doctor who works here part time, come this way"
+    hide lione_right
     if seen_nexus_scene_1 == False:
             $ seen_nexus_scene_1 = True
             jump nexus_scene_1
@@ -344,6 +361,8 @@ label inn:
 label roke_house:
     scene red
     "You are at the Roke's House."
+    show novanum_right at right
+    show roke_left at left
     "Roke""GET THE HELL OUTTA HERE YA BRAT"
     if ((seen_nexus_scene_8 == False) and (seen_nexus_scene_7 == True)):
         $ seen_nexus_scene_8 = True
@@ -356,13 +375,16 @@ label roke_house:
 label max_house:
     scene red
     "You are at Max's House."
+    show novanum_left at left
     if ((seen_nexus_scene_3 == False) and (seen_nexus_scene_2 == True)):
         $ seen_nexus_scene_3 = True
+        hide novanum_left
         jump nexus_scene_3
     else:
         no"What a dump!"
     if ((seen_nexus_scene_6 == False) and (seen_nexus_scene_5 == True)):
         $ seen_nexus_scene_6 = True
+        hide novanum_left
         jump nexus_scene_6
     menu:
         "return to nexus":
@@ -372,6 +394,7 @@ label max_house:
 label train_station:
     scene red
     "You are at the Train Station."
+    show novanum_left at left
     no"It looks like theres no train here right now"
     if ((seen_nexus_scene_4 == False) and (seen_nexus_scene_3 == True)):
         $ seen_nexus_scene_4 = True
@@ -384,7 +407,9 @@ label train_station:
 label town_watch_tower:
     scene red
     "You are at the Town Watch Tower."
+    show novanum_left at left
     if ((seen_nexus_scene_9 == False) and (seen_nexus_scene_8 == True)):
+        show novanum_right at right
         no"Because large dark towers dont scream OMINOUS!"
         while True:
             scene yellow
@@ -436,8 +461,11 @@ label floor_3:
         "Stasis Hudokai":
             "Nova's arm lifts up to face the guards and a wave of invisible energy flows across the room like a wave , all the guards slow down and the group heads for the stairs while they can"
         "All for one?":
+            show max_left
             m"Why no i might as well check out this weapon roke gave me"
+            show lione_left
             l"Itll bee a good test of strength after our training"
+            show novanum_left
             no"I guess Foltix was a higher grade of fighter come on guys"
             no"LETS DO THIS!"
     "The group make to the stairs"
@@ -471,12 +499,19 @@ label top_floor:
 label nexus_scene_1:
     scene red
     "Nova leaves Lione in the care of the doctor and leaves the inn"
+    show novanum_right at right
     "Nova shakily TRAVELS down an alley towards the town. As he does so, a crimson armoured solider turns to him in the alley."
+    show foltix_left
     f"Yo, we’ve found the Hudokai, so there’s no need to worry. See ya back at the station."
+    hide foltix_left
     "He walks off, leaving the Nova confused."
+    hide novanum_right at right
+    show novanum_left at left
     no"Who.."
+    show novanum_right at right
     "Nova turns the corner only to see another Nova walking down the path towrds him."
     "He hides and watches as this strange other version of himself walks by."
+    hide novanum_right at right
     no"I have to find out what’s going on."
     menu:
         no"Im so confused ,what should i do?"
@@ -491,12 +526,15 @@ label nexus_scene_1:
 label nexus_scene_2:
     " Nova turns and looks through the window. But the other him isn’t in there. Tense. Suddenly, regreting his chooses, hes punched in the face and floored by a stranger."
     "The stranger quickly pats Nova's body down and then runs off."
+    show novanum_left
     no"Worse things have happened today."
     no"Oi!"
     jump nexus
 
 label nexus_scene_3:
+    show novanum_right at right
     "Nova catches up with the stranger and tackles him to the floor"
+    show max_left
     "Both of them raise there hands ready to fight"
     menu:
         "What’s going on?":
@@ -525,12 +563,14 @@ label nexus_scene_3:
             m"Did you ever call him to ask how he was?"
             no"I... honestly don’t remember. I... I don’t remember anything before coming here."
             m"They say those who remember, those who are the strongest, are the first to go."
+            hide max_left
             "Max leaves."
         "Look, forget I said anything. I just wanna know how to leave.":
             m"Why?"
             no"Didn’t you hear me? I’m lost. I need to get home."
             m"But home’s here. Those who don’t understand that are arseholes. Arseholes who turn their back on their home... their family... their world."
             no"Forget it. I’ll survive on my own, thanks."
+            hide max_left
             "Nova walks away, shaking his head. Max leaves. As Nova walks away from him he spots someone walking by and heads towards him."
             no"‘Scuse me. Can you tell me the way out of this town?"
             "The person looks horrified."
