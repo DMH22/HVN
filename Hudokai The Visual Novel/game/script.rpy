@@ -60,7 +60,7 @@ default nexus_p1_complete  = False
 
 label start:
 
-    scene
+    scene bg_crash_site
 
     "A crash site. Dead bodies scatter a rocky landscape. Pieces
     of futuristic metal embed the area. A silver haired young
@@ -132,6 +132,9 @@ label start:
 
     #remove cyrill.
     hide cyrillwar_right
+    scene bg_nexus_cliff
+    show novanum_left at left
+    show lione_left
     "Prisoner 30895 and LIONE RUN from a large robotic spider that gives
     chase."
     "Several reinforcement officers get in the way"
