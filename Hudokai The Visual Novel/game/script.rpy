@@ -129,7 +129,23 @@ label start:
     window auto show
 
 
-    show cyrillwar_right at right
+
+    window auto hide
+    show cyrillwar_right at right:
+        subpixel True
+        parallel:
+            xpos 1.2
+            linear 0.71 xpos 1.0
+            linear 0.75 xpos 1.1
+        parallel:
+            ypos 1.0
+            linear 0.35 ypos 1.0
+    with Pause(1.56)
+    show cyrillwar_right at right:
+        pos (1.1, 1.0)
+    window auto show
+
+
     cw"I, Warden Cyrril War, place you, Lione Burgess, under arrest."
 
     "CYRRIL WAR walks into view, cybernetic pistol in hand. Prisoner 30895
@@ -160,12 +176,12 @@ label start:
     hide cyrillwar_right
     scene nexus_cliff
     show novanum_left at left
-    show lione_left
+    show lione_right at right
     "Prisoner 30895 and LIONE RUN from a large robotic spider that gives
     chase."
     "Several reinforcement officers get in the way"
     "You can hear a strange sound coming from inside the ship as the large robotic spider tank begins to move forward"
-    show gp_battler at right
+    show gp_battler at truecenter
     "You turn ,lifting you hand up to push through the officers"
     "suddenly a ball of fire apperes in your hand"
     menu:
@@ -187,7 +203,7 @@ label start:
 
     "As you both clean your hands and drink the fresh cold water you hear a crashing from the direction you came"
     "Coming towards you is a machine spider tank"
-    show arachnivolt at right
+    show arachnivolt at truecenter
 
     l"Oh crud"
 
@@ -208,9 +224,9 @@ label start:
     "Its blast explodes the cliff face behind you and your flung high into the air above it"
     "you feel the the sphere in you pocket heating up and feel the fireball gathering in your hands"
     "you fire one off allowing you to gain your balance and aim"
-    show concept_art_1
+    show concept_art_1 at truecenter
     "and unleash the other fireball directy into the airvents on the top as lione unleashes a flurry of sword attacks taking its legs off"
-    hide concept_art_1
+    scene concept_art_1
     hide arachnivolt
     scene nexus_cliff
     show novanum_left at left
@@ -275,7 +291,7 @@ label start:
 
     no"Looks like there’s a town ahead..."
 
-    show nexus_title
+    show nexus_title at top
     no"lets head in to town"
 
 

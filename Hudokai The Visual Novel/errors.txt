@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 613: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
-    "Nova manages to doze off"
-    ^
+File "game/script.rpy", line 294: multiple at clauses are prohibited.
+    show nexus_title at halfsize at top
+                                   ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri May 13 09:55:59 2022
+Fri May 13 23:13:20 2022
