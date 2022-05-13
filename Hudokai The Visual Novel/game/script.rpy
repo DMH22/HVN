@@ -132,7 +132,7 @@ label start:
 
     #remove cyrill.
     hide cyrillwar_right
-    scene bg_nexus_cliff
+    scene nexus_cliff
     show novanum_left at left
     show lione_left
     "Prisoner 30895 and LIONE RUN from a large robotic spider that gives
@@ -186,7 +186,7 @@ label start:
     "and unleash the other fireball directy into the airvents on the top as lione unleashes a flurry of sword attacks taking its legs off"
     hide concept_art_1
     hide arachnivolt
-    scene
+    scene nexus_cliff
     show novanum_left at left
     show lione_right at right
 
@@ -282,7 +282,7 @@ label nexus:
                 call town_watch_tower
 
 label nexus_Cliffside:
-    scene red
+    scene nexus_cliff
     "You are at Nexus Cliffside."
     show novanum_left at left
     no"The wardens guards are back that way we better stay away"
@@ -292,7 +292,7 @@ label nexus_Cliffside:
     return
 
 label crash_site:
-    scene red
+    scene bg_crash_site
     "You are at the crash site."
     show novanum_left at left
     no"The wardens back that way we better stay away"
@@ -305,7 +305,7 @@ label crash_site:
     return
 
 label achevment_house:
-    scene red
+    scene achevment_house
     "You are at the Achevment House."
     show novanum_left at left
     "worker""Sorry we arent open until the next cycle, come back later"
@@ -317,7 +317,7 @@ label achevment_house:
     return
 
 label item_shop:
-    scene red
+    scene item_shop
     "You are at the Item Shop."
     show novanum_left at left
     "worker""Sorry we arent open until the next cycle, come back later"
@@ -436,6 +436,7 @@ label town_watch_tower:
         return
 
 label floor_1:
+    scene floor_1
     "There are 2 sets of stairs that lead up to the next floor"
     menu:
         "Return to Entrance":
@@ -443,6 +444,7 @@ label floor_1:
         "Advance to the next floor":
             jump floor_2
 label floor_2:
+    scene floor_2
     "As you advance through the floor you come across monsters in the shape of locked doors"
     "After searching the cell's you find that one of the prisoners was plnning to escape and had snatched they keys from a guard"
     "The keys open the elivator door to the next floor"
@@ -455,6 +457,7 @@ label floor_2:
         "Advance to the next floor":
             jump floor_3
 label floor_3:
+    scene floor_3
     "The elivator doors open up into the town watch cafe"
     "In front of Nova, Max and Lione sit the Town Watch Patrol guards"
     "All heads turn to you"
@@ -480,6 +483,7 @@ label floor_3:
         "Advance to the next floor":
             jump floor_4
 label floor_4:
+    scene floor_4
     "The group enter through a door into a room with a movng floor"
     "they also notice 2 locked doors on ether side of the room"
     "after being split up multile times lione stands on the right tile and arrives at the stairs to the final room"
@@ -491,6 +495,7 @@ label floor_4:
             jump top_floor
 
 label top_floor:
+    scene top_floor
     "Nova and the group enter through a door into a walkway that looks down"
     $ seen_nexus_scene_9 = True
     jump nexus_scene_9
@@ -580,11 +585,13 @@ label nexus_scene_3:
             "Crazy-Man""You’ll be the next one taken!"
             no"What the hell’s wrong with this town?!"
             no"I wonder if there’s any transport to get me out of here? I’ll try up north of the town."
+            scene
     menu:
         "return to nexus":
             jump nexus
 
 label nexus_scene_4:
+    scene train_station
     no"I wonder what’s beyond this town..."
     "Nova boards the train, but after a few mnuests of the trains shaking mvement he finds himself back to the same train station. All town exits take them back to the town."
     no"That’s strange. So I can’t leave the town? It’s like that messy haired mugger said. I have to find him, otherwise we’re stuck here."
@@ -596,11 +603,13 @@ label nexus_scene_4:
     "MATT""You feel weak from all that’s happened, today. It’s best you find somewhere to rest, first. Ask me again, tomorrow. Don’t look for me. I’ll find you."
     "MATT disappears, quite literally."
     no"I hate people telling me what to do."
+    scene
     menu:
         "return to nexus":
             jump nexus
 
 label nexus_scene_5:
+        scene inn_scene
         "Nova manages to doze off"
         "A SHORT WHILE LATER"
         "BANG"
@@ -649,6 +658,7 @@ label nexus_scene_5:
                 jump nexus
 
 label nexus_scene_6:
+    scene max_scene_1
     "Night falls across the nexus"
     "Nova explores the Nexus in his search for MAX."
     "He finds him on the rooftop, alone. He joins him on top of the burnt house."
@@ -679,6 +689,7 @@ label nexus_scene_6:
             " FOLTIX appears out of nowhere and charges at the building at warp speed."
             "He jumps across the gap and tackles Nova but catches Max."
             "The world spirals away. Darkness. Flashes of light reveal FOULTIX violently attacking Nova."
+            scene max_scene_2
             "The darkness fades away."
             "Nova, beaten and bruised. He can barely stand."
             "FOLTIX is in front of him."
@@ -727,6 +738,7 @@ label nexus_scene_6:
             "MATT""It’s time. Take Mr. Nova inside your burnt tent of a place and rest up. He’s bruised, but will heal with some curative Hudokai."
             m"Curative Hudokai? What the fluff?"
             no"Do it..."
+            scene max_scene_3
             "Max takes Nova inside, leaving MATT outside alone."
             "MATT""It’s a new day."
             "The remander of the night passes without insident"
@@ -750,11 +762,13 @@ label nexus_scene_6:
             no"!"
             "MATT""I met Lione. She told me your prisoner report. She fears you, dude, but doesn’t want to admit it. You’re a wanted criminal. You have to fight if you want to survive."
             no"I’ll... find my own way."
+            scene
     menu:
         "return to nexus":
             jump nexus
 
 label nexus_scene_7:
+    scene meet_roke
     "Nova travels across the Nexus."
     "Everywhere is blocked off beyond the main path leading to the inn."
     "Nova eventually finds a middle aged man with one arm and a red scarf - ROKE."
@@ -796,11 +810,13 @@ label nexus_scene_7:
     "Roke""It’s Roke. Roke Zephyr. Don’t none o’ you forget that! Matt, you owe me. "
     "MATT leaves the area."
     "Roke""Twerp. All right, kids, follow me to my mansion."
+    scene
     menu:
         "return to nexus":
             jump nexus
 
 label nexus_scene_8:
+    scene roke_scene_1
     "Once they reach the mansion, ROKE charges Nova and begis to attack"
     "Roke""Defend yourself if you want to live!"
     menu:
@@ -825,6 +841,7 @@ label nexus_scene_8:
     n"I think you’d better concentrate on the battle."
     "Roke""Infernal kid ain’t gonna tell me how to fight!"
     "The fight ends with a draw both Novas Group and Roke are catching there breath when Foltix arrives"
+    scene roke_scene_2
     f"Ahh, Roke. I should’ve known it was you. I followed the flashes of Hudokai in the sky."
     "Roke""Oh, goody. It’s the Town Watch."
     l"I thought the strong were removed from the Nexus?"
