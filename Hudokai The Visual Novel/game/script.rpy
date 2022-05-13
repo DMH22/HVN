@@ -59,6 +59,8 @@ default nexus_p1_complete  = False
 # The game starts here.
 
 label start:
+    camera:
+        perspective True
 
     scene bg_crash_site
 
@@ -68,7 +70,20 @@ label start:
 
 
 
-    show novanum_left at left
+
+    window auto hide
+    show novanum_left at left:
+        subpixel True ypos 1.0
+        xpos -0.2
+        linear 0.56 xpos 0.1
+        linear 0.59 xpos 0.0
+        linear 0.68 xpos 0.0
+    with Pause(1.93)
+    show novanum_left at left:
+        pos (0.0, 1.0)
+    window auto show
+
+
     nn "arr..."
 
     menu:
@@ -102,7 +117,18 @@ label start:
     l"For the attempted murder of law enforcement, as well as damage of a prison ship..."
 
     hide lione_right
-    show lione_left
+
+    window auto hide
+    show lione_left at center:
+        subpixel True
+        matrixtransform OffsetMatrix(0.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)
+        easein_back 4.57 matrixtransform OffsetMatrix(-360.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)
+    with Pause(4.67)
+    show lione_left:
+        matrixtransform OffsetMatrix(-360.0, 0.0, 0.0)*RotateMatrix(0.0, 0.0, 0.0)
+    window auto show
+
+
     show cyrillwar_right at right
     cw"I, Warden Cyrril War, place you, Lione Burgess, under arrest."
 
