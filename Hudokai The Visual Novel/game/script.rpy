@@ -365,6 +365,7 @@ label item_shop:
     "worker""Sorry we arent open until the next cycle, come back later"
     no"Any suggestions?"
     "worker""Maybe try some shops around town"
+    hide novanum_left
     if ((seen_nexus_scene_2 == False) and (seen_nexus_scene_1 == True)):
         $ seen_nexus_scene_2 = True
         jump nexus_scene_2
@@ -653,12 +654,77 @@ label nexus_scene_1:
             jump nexus
 
 label nexus_scene_2:
-    show novanum_right
+
+    window auto hide
+    show novanum_right at right:
+        subpixel True
+        xpos 1.0
+        linear 0.02 xpos 1.0
+        linear 0.73 xpos 0.89
+        linear 0.66 xpos 0.5
+    with Pause(1.51)
+    show novanum_right:
+        xpos 0.5
+    window auto show
+
+
     show max_right at offscreenright
     " Nova turns and looks through the window. But the other him isn’t in there."
+
+    window auto hide
+    show novanum_right:
+        subpixel True
+        xpos 0.5
+        linear 2.3 xpos 0.5
+        linear 0.2 xpos 0.21
+    show max_right:
+        subpixel True
+        parallel:
+            xpos 1.0
+            linear 0.02 xpos 1.0
+            linear 0.69 xpos 0.76
+            linear 0.95 xpos 0.37
+            linear 0.57 xpos 0.46
+        parallel:
+            ypos 1.0
+            linear 1.95 ypos 1.0
+    with Pause(2.6)
+    show novanum_right:
+        xpos 0.21
+    show max_right:
+        pos (0.46, 1.0)
+    window auto show
+
+
+
     "Tense. Suddenly, regreting his chooses, hes punched in the face and floored by a stranger."
+
+    window auto hide
+    show max_right:
+        subpixel True
+        parallel:
+            xpos 0.46
+            linear 0.02 xpos 0.46
+            linear 0.6 xpos 0.07
+            linear 0.37 xpos 0.07
+            linear 0.02 xpos 0.7
+            linear 0.6 xpos 1.03
+        parallel:
+            ypos 1.0
+            linear 0.6 ypos 1.0
+            linear 0.11 ypos 0.98
+            linear 0.11 ypos 1.0
+            linear 0.07 ypos 0.98
+            linear 0.1 ypos 1.0
+    with Pause(1.71)
+    show max_right:
+        pos (1.03, 1.0)
+    window auto show
+
+
     "The stranger quickly pats Nova's body down and then runs off."
-    show novanum_left
+    hide novanum_right
+    show novanum_left at left
     no"Worse things have happened today."
     no"Oi!"
     jump nexus
