@@ -56,6 +56,13 @@ default seen_nexus_scene_8 = False
 default seen_nexus_scene_9 = False
 default nexus_p1_complete  = False
 
+
+#Stats
+define max_stat_level = 7
+#Social Stats
+default social_stats = {"Insight":1,"Judgement":1,"Willpower":1,"Competence":1,"Understanding":1,"Charisma":1}
+
+
 # The game starts here.
 
 label start:
@@ -102,8 +109,11 @@ label start:
     "Among the rubble and bodys you encounter a restless female whos alive"
     "As you move a box aside to help you see Long red hair, black uniform with shiny cyan, vertical strips down her arms and legs. Piercing eyes."
 
-    show lione_right at right
 
+    call level_up #NOTE: lvl up test
+
+
+    show lione_right at right
     l "(Groggy) Prisoner 30895... This is your fault."
 
     nn "..."
@@ -1297,5 +1307,29 @@ label nexus_scene_10:
     $ nexus_p1_complete = True
 
 
+
 # This ends the game.
 return
+
+
+
+
+$ social_stats = {"Insight":1,"Judgement":1,"Willpower":1,"Competence":1,"Understanding":1,"Charisma":1}
+
+#### Mechanics labels ####
+label level_up:
+    menu:
+        "Level up stat"
+        "Insight" if (social_stats["Insight"] < max_stat_level):
+            $ social_stats["Insight"] = social_stats["Insight"] + 1
+        "Judgement" if (social_stats["Judgement"] < max_stat_level):
+            $ social_stats["Judgement"] = social_stats["Judgement"] + 1
+        "Willpower" if (social_stats["Willpower"] < max_stat_level):
+            $ social_stats["Willpower"] = social_stats["Willpower"] + 1
+        "Competence" if (social_stats["Competence"] < max_stat_level):
+            $ social_stats["Competence"] = social_stats["Competence"] + 1
+        "Understanding" if (social_stats["Understanding"] < max_stat_level):
+            $ social_stats["Understanding"] = social_stats["Understanding"] + 1
+        "Charisma" if (social_stats["Charisma"] < max_stat_level):
+            $ social_stats["Charisma"] = social_stats["Charisma"] + 1
+    return
