@@ -549,19 +549,98 @@ label top_floor:
 label nexus_scene_1:
     scene red
     "Nova leaves Lione in the care of the doctor and leaves the inn"
-    show novanum_right at right
-    "Nova shakily TRAVELS down an alley towards the town. As he does so, a crimson armoured solider turns to him in the alley."
-    show foltix_left
+    "Nova shakily TRAVELS down an alley towards the town."
+
+    window auto hide
+    show novanum_right at right:
+        subpixel True
+        xpos 1.3
+        linear 0.62 xpos 1.0
+        linear 0.62 xpos 0.7
+    with Pause(1.34)
+    show novanum_right:
+        xpos 0.7
+    window auto show
+
+
+    "As he does so, a crimson armoured solider turns to him in the alley."
+
+    window auto hide
+    show foltix_left at offscreenleft:
+        subpixel True
+        parallel:
+            xpos 0.01
+            linear 0.45 xpos 0.25
+        parallel:
+            ypos 1.0
+            linear 0.05 ypos 1.0
+    with Pause(0.55)
+    show foltix_left:
+        pos (0.25, 1.0)
+    window auto show
+
+
     f"Yo, we’ve found the Hudokai, so there’s no need to worry. See ya back at the station."
-    hide foltix_left
+
+    window auto hide
+    show foltix_left:
+        subpixel True
+        xpos 0.25
+        linear 0.03 xpos 0.25
+        linear 1.22 xpos 0.01
+    with Pause(1.35)
+    show foltix_left:
+        xpos 0.01
+    window auto show
+
+
     "He walks off, leaving the Nova confused."
+    hide foltix_left
     hide novanum_right at right
     show novanum_left at left
     no"Who.."
-    show novanum_right at right
+
+    window auto hide
+    show novanum_right at offscreenright:
+        subpixel True
+        xpos 1.0
+        linear 0.03 xpos 1.0
+        linear 1.14 xpos 0.78
+    with Pause(1.27)
+    show novanum_right:
+        xpos 0.78
+    window auto show
+
+
     "Nova turns the corner only to see another Nova walking down the path towrds him."
+
+    window auto hide
+    show novanum_left at left:
+        subpixel True ypos 1.0
+        xpos 0.0
+        linear 0.03 xpos 0.0
+        linear 1.55 xpos -0.13
+    with Pause(1.68)
+    show novanum_left:
+        pos (-0.13, 1.0)
+    window auto show
+
+
     "He hides and watches as this strange other version of himself walks by."
     hide novanum_right at right
+
+    window auto hide
+    show novanum_left:
+        subpixel True
+        xpos -0.13
+        linear 0.03 xpos -0.13
+        linear 0.38 xpos 0.0
+    with Pause(0.51)
+    show novanum_left:
+        xpos 0.0
+    window auto show
+
+
     no"I have to find out what’s going on."
     menu:
         no"Im so confused ,what should i do?"
@@ -574,7 +653,10 @@ label nexus_scene_1:
             jump nexus
 
 label nexus_scene_2:
-    " Nova turns and looks through the window. But the other him isn’t in there. Tense. Suddenly, regreting his chooses, hes punched in the face and floored by a stranger."
+    show novanum_right
+    show max_right at offscreenright
+    " Nova turns and looks through the window. But the other him isn’t in there."
+    "Tense. Suddenly, regreting his chooses, hes punched in the face and floored by a stranger."
     "The stranger quickly pats Nova's body down and then runs off."
     show novanum_left
     no"Worse things have happened today."
@@ -634,9 +716,11 @@ label nexus_scene_3:
 
 label nexus_scene_4:
     scene train_station
+    show novanum_left at left
     no"I wonder what’s beyond this town..."
     "Nova boards the train, but after a few mnuests of the trains shaking mvement he finds himself back to the same train station. All town exits take them back to the town."
     no"That’s strange. So I can’t leave the town? It’s like that messy haired mugger said. I have to find him, otherwise we’re stuck here."
+    show matt_right at offscreenright
     "A man walks out of the shadows."
     "MATT""I’ve been watching you."
     no"So I’ve noticed."
